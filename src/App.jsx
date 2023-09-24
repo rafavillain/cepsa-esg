@@ -1,11 +1,11 @@
 // App.js
 import Chart from "chart.js/auto";
 import { CategoryScale } from "chart.js";
-import dataPie from "./data/data_pie.json";
+import dataPie from "./data/data_pie";
 import PieChart from "./components/PieChart";
-import dataBar from "./data/data_bar.json";
+import dataBar from "./data/data_bar";
 import BarChart from "./components/BarChart";
-import dataLine from "./data/data_line.json";
+import dataLine from "./data/data_line";
 import LineChart from "./components/LineChart";
 import { useState } from "react";
 // import "./styles.css";
