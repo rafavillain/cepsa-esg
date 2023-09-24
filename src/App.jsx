@@ -1,4 +1,4 @@
-// App.js
+import React, { useRef, useCallback } from "react";
 import Chart from "chart.js/auto";
 import { CategoryScale } from "chart.js";
 import dataPie from "./data/data_pie";
@@ -19,6 +19,15 @@ export default function App() {
     setState({ selectedValue: event.target.value });
   };
 
+  let ref = useRef(null);
+
+  const downloadImage = useCallback(() => {
+    const link = document.createElement("a");
+    link.download = "chart.png";
+    link.href = ref.current.toBase64Image();
+    link.click();
+  }, []);
+
   return (
     <div className="App">
       <select value={state.selectedValue} onChange={handleSelectChange}>
@@ -28,7 +37,7 @@ export default function App() {
         <option value="chart-line">Línea</option>
       </select>
 
-      {state.selectedValue === 'chart-pie' && <PieChart chartData={dataPie} />}
+      {state.selectedValue === 'chart-pie' && <PieChart chartData={dataPie} chartRef={ref} chartDownloadImage={downloadImage} />}
       {state.selectedValue === 'chart-bar' && <BarChart chartData={dataBar} />}
       {state.selectedValue === 'chart-line' && <LineChart chartData={dataLine} />}
     </div>

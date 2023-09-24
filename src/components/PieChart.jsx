@@ -1,11 +1,14 @@
-/* eslint-disable react/prop-types */
+// import React, { useRef, useCallback } from "react";
 import { Pie } from "react-chartjs-2";
 
-function PieChart({ chartData }) {
+function PieChart({ chartData, chartRef, chartDownloadImage }) {
   return (
     <div className="chart-container">
-      <h2 style={{ textAlign: "center" }}>Pie Chart</h2>
-      <Pie data={chartData} />
+      <button type="button" onClick={chartDownloadImage}>Download as image</button>
+
+      <button onClick={e => chartDownloadPdf}>Download as PDF</button>
+
+      <Pie ref={chartRef} data={chartData} />
     </div>
   );
 }
