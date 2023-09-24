@@ -1,3 +1,19 @@
+# Intro
+
+Prueba con react-charts-js 2
+
+# Installation
+
+npm install
+
+# Run project
+
+npm run dev
+
+# Docs
+
+https://react-chartjs-2.js.org/
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
