@@ -1,11 +1,13 @@
 /* eslint-disable react/prop-types */
 import { Line } from "react-chartjs-2";
 
-function LineChart({ chartData }) {
+function LineChart({ chartData, chartRef, chartDownloadImage, chartDownloadPdf }) {
   return (
     <div className="chart-container">
-      <h2 style={{ textAlign: "center" }}>Line Chart</h2>
-      <Line data={chartData} />
+      <button type="button" onClick={chartDownloadImage}>Download as image</button>
+      <button onClick={chartDownloadPdf}>Download as PDF</button>
+
+      <Line ref={chartRef} data={chartData} />
     </div>
   );
 }
