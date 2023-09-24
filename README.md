@@ -6,7 +6,7 @@ npm install
 
 npm run dev
 
-# Documentation
+# Documentation
 
 https://react-chartjs-2.js.org/
 
