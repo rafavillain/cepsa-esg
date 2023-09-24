@@ -1,3 +1,7 @@
+# Intro
+
+Prueba con react-charts-js 2 y typescript.
+
 # Installation
 
 npm install
