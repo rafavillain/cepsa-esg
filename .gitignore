@@ -1,0 +1,9 @@
+/.bundle
+/.sass-cache
+/.cache
+/.idea
+.DS_Store
+/.vscode
+.idea/
+.idea/workspace.xml
+/node_modules
