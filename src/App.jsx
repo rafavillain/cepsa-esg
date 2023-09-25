@@ -36,7 +36,7 @@ export default function App() {
   const downloadPdf = () => {
     // const but = e.target;
     // but.style.display = "none";
-    let input = document.querySelector(".chart-container canvas");
+    let input = document.querySelector(".chart-container");
 
     html2canvas(input).then(canvas => {
       const img = canvas.toDataURL("image/png");
