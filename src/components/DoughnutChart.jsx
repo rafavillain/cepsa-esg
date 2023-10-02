@@ -1,7 +1,7 @@
 import { Doughnut } from "react-chartjs-2";
 import ChartEsgSelector from "./ChartEsgSelector";
 import ChartEsgTitle from "./ChartEsgTitle";
-import ChartCustomLegend from './ChartEsgLegend';
+import ChartEsgCustomLegend from './ChartEsgCustomLegend';
 import ChartEsgRef from "./ChartEsgRef";
 import ChartEsgDownload from "./ChartEsgDownload";
 import html2canvas from "html2canvas";
@@ -62,7 +62,7 @@ export default function DoughnutChart({ chartTitle, chartSubitle, chartData, cha
             </div>
 
             <div className="App__chart-bottom-content">
-                <ChartCustomLegend data={chartDatasets} />
+                <ChartEsgCustomLegend data={chartDatasets} />
 
                 <ChartEsgRef chartRef="[GRI 302-1/11.1.2]"></ChartEsgRef>
             </div>

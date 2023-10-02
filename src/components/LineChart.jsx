@@ -1,7 +1,7 @@
 import { Line } from "react-chartjs-2";
 import ChartEsgSelector from "./ChartEsgSelector";
 import ChartEsgTitle from "./ChartEsgTitle";
-import CustomLegend from './ChartEsgLegend';
+import ChartEsgCustomLegend from './ChartEsgCustomLegend';
 import ChartEsgRef from "./ChartEsgRef";
 import ChartEsgDownload from "./ChartEsgDownload";
 import html2canvas from "html2canvas";
@@ -62,7 +62,7 @@ export default function LineChart({ chartTitle, chartSubitle, chartData, chartOp
             </div>
 
             <div className="App__chart-bottom-content">
-                <CustomLegend data={chartDatasets} />
+                <ChartEsgCustomLegend data={chartDatasets} />
 
                 <ChartEsgRef chartRef="[GRI 302-1/11.1.2]"></ChartEsgRef>
             </div>
