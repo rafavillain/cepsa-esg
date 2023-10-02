@@ -1,4 +1,7 @@
+import { useState, useEffect } from "react";
+
 import ChartEsgCustomLegend from './ChartEsgCustomLegend';
+import ChartEsgMainSelector from "./ChartEsgMainSelector"
 import ChartEsgRef from "./ChartEsgRef";
 import html2canvas from "html2canvas";
 import pdfConverter from "jspdf";
@@ -21,11 +24,17 @@ import DoughnutChart from "./DoughnutChart";
 import DoughnutOptions from "../options/doughnut_options";
 
 export default function ChartEsg({ chart }) {
-    const chartType = chart.type;
+    const [selector4Value, setSelector4Value] = useState('');
+    const [selector4Index, setSelector4Index] = useState(0);
+    const type4 = chart.elements_lvl4 ? chart.elements_lvl4[0].type : '';
+    const chartType = type4 ? type4 : chart.type;
     const chartTitle = chart.title;
     const chartSubtitle = chart.subtitle;
     const chartData = chart.chartData ? chart.chartData[0] : null;
     const chartDatasets = chartData ? chartData.datasets : null;
+
+    const chartData4 = chart.elements_lvl4 ? chart.elements_lvl4[selector4Index].chartData[0] : null;
+    const chartFinalData = chartData ? chartData : chartData4;
 
     // download chart as image
     const downloadImage = () => {
@@ -57,16 +66,21 @@ export default function ChartEsg({ chart }) {
         });
     };
 
+    const handleChangeSelector4 = (e) => {
+        setSelector4Value(e.target.value);
+        setSelector4Index(e.target.selectedIndex);
+    }
+
     const chartRender = () => {
         switch (chartType) {
             case "bar":
-                return <BarChart chartData={chartData} chartOptions={BarOptions} />;
+                return <BarChart chartData={chartFinalData} chartOptions={BarOptions} />;
             case "line":
-                return <LineChart chartData={chartData} chartOptions={LineOptions} />;
+                return <LineChart chartData={chartFinalData} chartOptions={LineOptions} />;
             case "pie":
-                return <PieChart chartData={chartData} chartOptions={PieOptions} />;
+                return <PieChart chartData={chartFinalData} chartOptions={PieOptions} />;
             case "doughnut":
-                return <DoughnutChart chartData={chartData} chartOptions={DoughnutOptions} />;
+                return <DoughnutChart chartData={chartFinalData} chartOptions={DoughnutOptions} />;
             default:
                 return null;
         }
@@ -87,6 +101,16 @@ export default function ChartEsg({ chart }) {
                     >
                     </ChartEsgDownload>
                 </div>
+
+                {chart.elements_lvl4 &&
+                    <ChartEsgMainSelector
+                        value={selector4Value}
+                        name="name 4"
+                        id="selector4"
+                        options={chart.elements_lvl4}
+                        onChange={handleChangeSelector4}
+                    />
+                }
 
                 {chartRender()}
 

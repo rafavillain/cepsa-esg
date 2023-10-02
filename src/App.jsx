@@ -11,18 +11,22 @@ import { CategoryScale } from "chart.js";
 Chart.register(CategoryScale);
 
 export default function App() {
-    const [chart, setSelector] = useState('');
     const data = charts_data;
+    const [chart, setSelector] = useState(charts_data);
+    // const [selector4, setTest] = useState('');
+
+    // console.log(selector4);
 
     return (
         <div className="App">
             <ChartMainSelectors
                 data={data} 
-                setSelector3={setSelector} 
+                setSelector3={setSelector}
             />
 
             <ChartEsg 
                 chart={chart}
+                // setTest4={setTest}
             />
         </div>
     );
