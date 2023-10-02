@@ -145,60 +145,117 @@
                         {
                             "id": "gei-emissions-2",
                             "title": "Emisiones GEI",
-                            "subtitle": "Consumo de energía dentro de la organización distinguiendo por renovable y no renovable.",
-                            "type": "bar",
-                            "chartData": [
+                            "subtitle": "Consumo de energía dentro de la organización distinguiendo por renovable y no renovable",
+                            "elements_lvl4": [
                                 {
-                                    "labels": [
-                                        "2019",
-                                        "2020",
-                                        "2021",
-                                        "2022",
-                                        "2023"
-                                    ],
-                                    "datasets": [
+                                    "id": "gei-emissions-3",
+                                    "title": "Emisiones GEI 3",
+                                    "subtitle": "Consumo de energía dentro de la organización distinguiendo por renovable y no renovable 3.",
+                                    "type": "bar",
+                                    "chartData": [
                                         {
-                                            "label": "Alcance 1",
-                                            "data": [
-                                                6062,
-                                                5214,
-                                                5290,
-                                                5280,
-                                                0
+                                            "labels": [
+                                                "2019",
+                                                "2020",
+                                                "2021",
+                                                "2022",
+                                                "2023"
                                             ],
-                                            "backgroundColor": "rgb(38 55 70)",
-                                            "stack": "combined",
-                                            "borderColor": "transparent",
-                                            "borderWidth": 2,
-                                            "borderRadius": 4
-                                        },
+                                            "datasets": [
+                                                {
+                                                    "label": "Alcance 1",
+                                                    "data": [
+                                                        6062,
+                                                        5214,
+                                                        5290,
+                                                        5280,
+                                                        0
+                                                    ],
+                                                    "backgroundColor": "rgb(38 55 70)",
+                                                    "stack": "combined",
+                                                    "borderColor": "transparent",
+                                                    "borderWidth": 2,
+                                                    "borderRadius": 4
+                                                },
+                                                {
+                                                    "label": "Alcance 2 (ubicación)",
+                                                    "data": [],
+                                                    "backgroundColor": "rgb(150 211 221)",
+                                                    "stack": "combined",
+                                                    "borderColor": "transparent",
+                                                    "borderWidth": 2,
+                                                    "borderRadius": 4
+                                                },
+                                                {
+                                                    "label": "Alcance 2 (mercado)",
+                                                    "data": [],
+                                                    "backgroundColor": "rgb(58 114 122)",
+                                                    "stack": "combined",
+                                                    "borderColor": "transparent",
+                                                    "borderWidth": 2,
+                                                    "borderRadius": 4
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "id": "gei-emissions-4",
+                                    "title": "Emisiones GEI 4",
+                                    "subtitle": "Consumo de energía dentro de la organización distinguiendo por renovable y no renovable 4.",
+                                    "type": "line",
+                                    "chartData": [
                                         {
-                                            "label": "Alcance 2 (ubicación)",
-                                            "data": [
+                                            "labels": [
+                                                "2019",
+                                                "2020",
+                                                "2021",
+                                                "2022",
+                                                "2023"
                                             ],
-                                            "backgroundColor": "rgb(150 211 221)",
-                                            "stack": "combined",
-                                            "borderColor": "transparent",
-                                            "borderWidth": 2,
-                                            "borderRadius": 4
-                                        },
-                                        {
-                                            "label": "Alcance 2 (mercado)",
-                                            "data": [
-                                            ],
-                                            "backgroundColor": "rgb(58 114 122)",
-                                            "stack": "combined",
-                                            "borderColor": "transparent",
-                                            "borderWidth": 2,
-                                            "borderRadius": 4
+                                            "datasets": [
+                                                {
+                                                    "label": "Alcance 1",
+                                                    "data": [
+                                                        6062,
+                                                        5214,
+                                                        5290,
+                                                        5280,
+                                                        0
+                                                    ],
+                                                    "backgroundColor": "rgb(38 55 70)",
+                                                    "stack": "combined",
+                                                    "borderColor": "transparent",
+                                                    "borderWidth": 2,
+                                                    "borderRadius": 4
+                                                },
+                                                {
+                                                    "label": "Alcance 2 (ubicación)",
+                                                    "data": [],
+                                                    "backgroundColor": "rgb(150 211 221)",
+                                                    "stack": "combined",
+                                                    "borderColor": "transparent",
+                                                    "borderWidth": 2,
+                                                    "borderRadius": 4
+                                                },
+                                                {
+                                                    "label": "Alcance 2 (mercado)",
+                                                    "data": [],
+                                                    "backgroundColor": "rgb(58 114 122)",
+                                                    "stack": "combined",
+                                                    "borderColor": "transparent",
+                                                    "borderWidth": 2,
+                                                    "borderRadius": 4
+                                                }
+                                            ]
                                         }
                                     ]
                                 }
                             ]
                         },
                         {
-                            "id": "gei-emissions-intensity",
-                            "title": "Intensidad de emisiones de GEI",
+                            "id": "gei-emissions-3",
+                            "title": "Emisiones GEI 3",
                             "subtitle": "Consumo de energía dentro de la organización distinguiendo por renovable y no renovable.",
                             "type": "line",
                             "chartData": [

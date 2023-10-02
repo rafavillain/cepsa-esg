@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-export default function ChartEsgMainSelector({label, defaultValue, value, name, id, options, onChange}) {
+export default function ChartEsgMainSelector({label, value, name, id, options, onChange}) {
     return (
         <>  
             <div className="chart-selector">
@@ -8,7 +8,6 @@ export default function ChartEsgMainSelector({label, defaultValue, value, name, 
                 <select 
                     name={name}
                     id={id}
-                    defaultValue={defaultValue}
                     value={value}
                     onChange={onChange}
                 >
