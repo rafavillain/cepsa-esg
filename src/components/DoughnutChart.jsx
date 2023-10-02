@@ -1,13 +1,13 @@
-import { Line } from "react-chartjs-2";
+import { Doughnut } from "react-chartjs-2";
 import ChartEsgSelector from "./ChartEsgSelector";
 import ChartEsgTitle from "./ChartEsgTitle";
-import CustomLegend from './ChartEsgLegend';
+import ChartCustomLegend from './ChartEsgLegend';
 import ChartEsgRef from "./ChartEsgRef";
 import ChartEsgDownload from "./ChartEsgDownload";
 import html2canvas from "html2canvas";
 import pdfConverter from "jspdf";
 
-export default function LineChart({ chartTitle, chartSubitle, chartData, chartOptions, chartSelector=true, chartDatasets }) {
+export default function DoughnutChart({ chartTitle, chartSubitle, chartData, chartOptions, chartSelector=true, chartDatasets }) {
     // download chart as image
     const downloadImage = () => {
         let input = document.querySelector('[data-print]');
@@ -37,7 +37,7 @@ export default function LineChart({ chartTitle, chartSubitle, chartData, chartOp
             pdf.save("chart.pdf");
         });
     };
-    
+
     return (
         <>
             <div className="App__intro">
@@ -53,16 +53,16 @@ export default function LineChart({ chartTitle, chartSubitle, chartData, chartOp
             </div>
 
             {chartSelector && <ChartEsgSelector />}
-            
+
             <div className="App__chart-container">
-                <Line
+                <Doughnut
                     data={chartData}
                     options={chartOptions} 
                 />
             </div>
 
             <div className="App__chart-bottom-content">
-                <CustomLegend data={chartDatasets} />
+                <ChartCustomLegend data={chartDatasets} />
 
                 <ChartEsgRef chartRef="[GRI 302-1/11.1.2]"></ChartEsgRef>
             </div>

@@ -1,0 +1,694 @@
+{
+    "charts": [
+        {
+            "id": "climate-change",
+            "title": "Cambio climatico",
+            "elements_lvl2": [
+                {
+                    "id": "energy-consumption",
+                    "title": "Consumo energético",
+                    "elements_lvl3": [
+                        {
+                            "id": "organization-energy-consumption",
+                            "title": "Consumo energético dentro de la organización",
+                            "subtitle": "Consumo de energía dentro de la organización distinguiendo por renovable y no renovable.",
+                            "type": "bar",
+                            "chartData": [
+                                {
+                                    "labels": [
+                                        "2019",
+                                        "2020",
+                                        "2021",
+                                        "2022",
+                                        "2023"
+                                    ],
+                                    "datasets": [
+                                        {
+                                            "label": "Electricidad renovable",
+                                            "data": [
+                                                1200377,
+                                                1176026,
+                                                4051166,
+                                                4579718,
+                                                0
+                                            ],
+                                            "backgroundColor": "rgb(38 55 70)",
+                                            "stack": "combined",
+                                            "borderColor": "transparent",
+                                            "borderWidth": 2,
+                                            "borderRadius": 4
+                                        },
+                                        {
+                                            "label": "Electricidad no renovable",
+                                            "data": [
+                                                5604581,
+                                                5542132,
+                                                1472328,
+                                                1452931,
+                                                0
+                                            ],
+                                            "backgroundColor": "rgb(150, 211, 221)",
+                                            "stack": "combined",
+                                            "borderColor": "transparent",
+                                            "borderWidth": 2,
+                                            "borderRadius": 4
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "id": "out-of-organization-energy-consumption",
+                            "title": "Consumo energético fuera de la organización",
+                            "subtitle": "Consumo de energía dentro de la organización distinguiendo por renovable y no renovable.",
+                            "type": "line",
+                            "chartData": [
+                                {
+                                    "labels": [
+                                        "January",
+                                        "February",
+                                        "March",
+                                        "April",
+                                        "May",
+                                        "June",
+                                        "July"
+                                    ],
+                                    "datasets": [
+                                        {
+                                            "label": "Dataset 1",
+                                            "data": [
+                                                65,
+                                                59,
+                                                80,
+                                                81,
+                                                56,
+                                                55,
+                                                40
+                                            ],
+                                            "borderColor": "rgb(255, 99, 132)",
+                                            "backgroundColor": "rgba(255, 99, 132, 0.5)"
+                                        },
+                                        {
+                                            "label": "Dataset 2",
+                                            "data": [
+                                                1,
+                                                9,
+                                                20,
+                                                61,
+                                                16,
+                                                5,
+                                                12
+                                            ],
+                                            "borderColor": "rgb(53, 162, 235)",
+                                            "backgroundColor": "rgba(53, 162, 235, 0.5)"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "id": "energy-intensity",
+                            "title": "Intensidad energética",
+                            "subtitle": "Consumo de energía dentro de la organización distinguiendo por renovable y no renovable.",
+                            "type": "pie",
+                            "chartData": [
+                                {
+                                    "labels": [
+                                        "Red",
+                                        "Blue",
+                                        "Yellow"
+                                    ],
+                                    "datasets": [
+                                        {
+                                            "label": "Dataset pie 1",
+                                            "data": [
+                                                300,
+                                                50,
+                                                100
+                                            ],
+                                            "backgroundColor": [
+                                                "rgb(255, 99, 132)",
+                                                "rgb(54, 162, 235)",
+                                                "rgb(255, 205, 86)"
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "gei-emissions-1",
+                    "title": "Emisiones GEI",
+                    "elements_lvl3": [
+                        {
+                            "id": "gei-emissions-2",
+                            "title": "Emisiones GEI",
+                            "subtitle": "Consumo de energía dentro de la organización distinguiendo por renovable y no renovable.",
+                            "type": "bar",
+                            "chartData": [
+                                {
+                                    "labels": [
+                                        "2019",
+                                        "2020",
+                                        "2021",
+                                        "2022",
+                                        "2023"
+                                    ],
+                                    "datasets": [
+                                        {
+                                            "label": "Alcance 1",
+                                            "data": [
+                                                6062,
+                                                5214,
+                                                5290,
+                                                5280,
+                                                0
+                                            ],
+                                            "backgroundColor": "rgb(38 55 70)",
+                                            "stack": "combined",
+                                            "borderColor": "transparent",
+                                            "borderWidth": 2,
+                                            "borderRadius": 4
+                                        },
+                                        {
+                                            "label": "Alcance 2 (ubicación)",
+                                            "data": [
+                                            ],
+                                            "backgroundColor": "rgb(150 211 221)",
+                                            "stack": "combined",
+                                            "borderColor": "transparent",
+                                            "borderWidth": 2,
+                                            "borderRadius": 4
+                                        },
+                                        {
+                                            "label": "Alcance 2 (mercado)",
+                                            "data": [
+                                            ],
+                                            "backgroundColor": "rgb(58 114 122)",
+                                            "stack": "combined",
+                                            "borderColor": "transparent",
+                                            "borderWidth": 2,
+                                            "borderRadius": 4
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "id": "gei-emissions-intensity",
+                            "title": "Intensidad de emisiones de GEI",
+                            "subtitle": "Consumo de energía dentro de la organización distinguiendo por renovable y no renovable.",
+                            "type": "line",
+                            "chartData": [
+                                {
+                                    "labels": [
+                                        "January",
+                                        "February",
+                                        "March",
+                                        "April",
+                                        "May",
+                                        "June",
+                                        "July"
+                                    ],
+                                    "datasets": [
+                                        {
+                                            "label": "Dataset 1",
+                                            "data": [
+                                                65,
+                                                59,
+                                                80,
+                                                81,
+                                                56,
+                                                55,
+                                                40
+                                            ],
+                                            "borderColor": "rgb(255, 99, 132)",
+                                            "backgroundColor": "rgba(255, 99, 132, 0.5)"
+                                        },
+                                        {
+                                            "label": "Dataset 2",
+                                            "data": [
+                                                1,
+                                                9,
+                                                20,
+                                                61,
+                                                16,
+                                                5,
+                                                12
+                                            ],
+                                            "borderColor": "rgb(53, 162, 235)",
+                                            "backgroundColor": "rgba(53, 162, 235, 0.5)"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "id": "methane-emissions",
+                            "title": "Emisiones de metano",
+                            "subtitle": "Consumo de energía dentro de la organización distinguiendo por renovable y no renovable.",
+                            "type": "line",
+                            "chartData": [
+                                {
+                                    "labels": [
+                                        "January",
+                                        "February",
+                                        "March",
+                                        "April",
+                                        "May",
+                                        "June",
+                                        "July"
+                                    ],
+                                    "datasets": [
+                                        {
+                                            "label": "Dataset 1",
+                                            "data": [
+                                                65,
+                                                59,
+                                                80,
+                                                81,
+                                                56,
+                                                55,
+                                                40
+                                            ],
+                                            "borderColor": "rgb(255, 99, 132)",
+                                            "backgroundColor": "rgba(255, 99, 132, 0.5)"
+                                        },
+                                        {
+                                            "label": "Dataset 2",
+                                            "data": [
+                                                1,
+                                                9,
+                                                20,
+                                                61,
+                                                16,
+                                                5,
+                                                12
+                                            ],
+                                            "borderColor": "rgb(53, 162, 235)",
+                                            "backgroundColor": "rgba(53, 162, 235, 0.5)"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "environment",
+            "title": "Medio ambiente",
+            "elements_lvl2": [
+                {
+                    "id": "water",
+                    "title": "Agua",
+                    "elements_lvl3": [
+                        {
+                            "id": "water-extraction",
+                            "title": "Extracción de agua",
+                            "subtitle": "Consumo de energía dentro de la organización distinguiendo por renovable y no renovable.",
+                            "type": "doughnut",
+                            "chartData": [
+                                {
+                                    "labels": [
+                                        "Red",
+                                        "Blue",
+                                        "Yellow"
+                                    ],
+                                    "datasets": [
+                                        {
+                                            "label": "My First Dataset",
+                                            "data": [
+                                                300,
+                                                50,
+                                                100
+                                            ],
+                                            "backgroundColor": [
+                                                "rgb(255, 99, 132)",
+                                                "rgb(54, 162, 235)",
+                                                "rgb(255, 205, 86)"
+                                            ],
+                                            "hoverOffset": 4
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "id": "water-vert",
+                            "title": "Vertido de agua",
+                            "subtitle": "Consumo de energía dentro de la organización distinguiendo por renovable y no renovable.",
+                            "type": "line",
+                            "chartData": [
+                                {
+                                    "labels": [
+                                        "January",
+                                        "February",
+                                        "March",
+                                        "April",
+                                        "May",
+                                        "June",
+                                        "July"
+                                    ],
+                                    "datasets": [
+                                        {
+                                            "label": "Dataset 1",
+                                            "data": [
+                                                65,
+                                                59,
+                                                80,
+                                                81,
+                                                56,
+                                                55,
+                                                40
+                                            ],
+                                            "borderColor": "rgb(255, 99, 132)",
+                                            "backgroundColor": "rgba(255, 99, 132, 0.5)"
+                                        },
+                                        {
+                                            "label": "Dataset 2",
+                                            "data": [
+                                                1,
+                                                9,
+                                                20,
+                                                61,
+                                                16,
+                                                5,
+                                                12
+                                            ],
+                                            "borderColor": "rgb(53, 162, 235)",
+                                            "backgroundColor": "rgba(53, 162, 235, 0.5)"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "id": "water-consumption",
+                            "title": "Consumo de agua",
+                            "subtitle": "Consumo de energía dentro de la organización distinguiendo por renovable y no renovable.",
+                            "type": "line",
+                            "chartData": [
+                                {
+                                    "labels": [
+                                        "January",
+                                        "February",
+                                        "March",
+                                        "April",
+                                        "May",
+                                        "June",
+                                        "July"
+                                    ],
+                                    "datasets": [
+                                        {
+                                            "label": "Dataset 1",
+                                            "data": [
+                                                65,
+                                                59,
+                                                80,
+                                                81,
+                                                56,
+                                                55,
+                                                40
+                                            ],
+                                            "borderColor": "rgb(255, 99, 132)",
+                                            "backgroundColor": "rgba(255, 99, 132, 0.5)"
+                                        },
+                                        {
+                                            "label": "Dataset 2",
+                                            "data": [
+                                                1,
+                                                9,
+                                                20,
+                                                61,
+                                                16,
+                                                5,
+                                                12
+                                            ],
+                                            "borderColor": "rgb(53, 162, 235)",
+                                            "backgroundColor": "rgba(53, 162, 235, 0.5)"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "waste",
+                    "title": "Residuos",
+                    "elements_lvl3": [
+                        {
+                            "id": "generated-waste",
+                            "title": "Residuos generados",
+                            "subtitle": "Consumo de energía dentro de la organización distinguiendo por renovable y no renovable.",
+                            "type": "bar",
+                            "chartData": [
+                                {
+                                    "labels": [
+                                        "2019",
+                                        "2020",
+                                        "2021",
+                                        "2022",
+                                        "2023"
+                                    ],
+                                    "datasets": [
+                                        {
+                                            "label": "Electricidad renovable",
+                                            "data": [
+                                                1200377,
+                                                1176026,
+                                                4051166,
+                                                4579718,
+                                                0
+                                            ],
+                                            "backgroundColor": "rgb(38 55 70)",
+                                            "stack": "combined",
+                                            "borderColor": "transparent",
+                                            "borderWidth": 2,
+                                            "borderRadius": 4
+                                        },
+                                        {
+                                            "label": "Electricidad no renovable",
+                                            "data": [
+                                                5604581,
+                                                5542132,
+                                                1472328,
+                                                1452931,
+                                                0
+                                            ],
+                                            "backgroundColor": "rgb(150, 211, 221)",
+                                            "stack": "combined",
+                                            "borderColor": "transparent",
+                                            "borderWidth": 2,
+                                            "borderRadius": 4
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "id": "generated-waste-not-elimination",
+                            "title": "Residuos no destinados a eliminación",
+                            "subtitle": "Consumo de energía dentro de la organización distinguiendo por renovable y no renovable.",
+                            "type": "line",
+                            "chartData": [
+                                {
+                                    "labels": [
+                                        "January",
+                                        "February",
+                                        "March",
+                                        "April",
+                                        "May",
+                                        "June",
+                                        "July"
+                                    ],
+                                    "datasets": [
+                                        {
+                                            "label": "Dataset 1",
+                                            "data": [
+                                                65,
+                                                59,
+                                                80,
+                                                81,
+                                                56,
+                                                55,
+                                                40
+                                            ],
+                                            "borderColor": "rgb(255, 99, 132)",
+                                            "backgroundColor": "rgba(255, 99, 132, 0.5)"
+                                        },
+                                        {
+                                            "label": "Dataset 2",
+                                            "data": [
+                                                1,
+                                                9,
+                                                20,
+                                                61,
+                                                16,
+                                                5,
+                                                12
+                                            ],
+                                            "borderColor": "rgb(53, 162, 235)",
+                                            "backgroundColor": "rgba(53, 162, 235, 0.5)"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "id": "generated-waste-elimination",
+                            "title": "Residuos destinados a eliminación",
+                            "subtitle": "Consumo de energía dentro de la organización distinguiendo por renovable y no renovable.",
+                            "type": "line",
+                            "chartData": [
+                                {
+                                    "labels": [
+                                        "January",
+                                        "February",
+                                        "March",
+                                        "April",
+                                        "May",
+                                        "June",
+                                        "July"
+                                    ],
+                                    "datasets": [
+                                        {
+                                            "label": "Dataset 1",
+                                            "data": [
+                                                65,
+                                                59,
+                                                80,
+                                                81,
+                                                56,
+                                                55,
+                                                40
+                                            ],
+                                            "borderColor": "rgb(255, 99, 132)",
+                                            "backgroundColor": "rgba(255, 99, 132, 0.5)"
+                                        },
+                                        {
+                                            "label": "Dataset 2",
+                                            "data": [
+                                                1,
+                                                9,
+                                                20,
+                                                61,
+                                                16,
+                                                5,
+                                                12
+                                            ],
+                                            "borderColor": "rgb(53, 162, 235)",
+                                            "backgroundColor": "rgba(53, 162, 235, 0.5)"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "id": "significant-spills",
+                            "title": "Derrames significativos",
+                            "subtitle": "Consumo de energía dentro de la organización distinguiendo por renovable y no renovable.",
+                            "type": "line",
+                            "chartData": [
+                                {
+                                    "labels": [
+                                        "January",
+                                        "February",
+                                        "March",
+                                        "April",
+                                        "May",
+                                        "June",
+                                        "July"
+                                    ],
+                                    "datasets": [
+                                        {
+                                            "label": "Dataset 1",
+                                            "data": [
+                                                65,
+                                                59,
+                                                80,
+                                                81,
+                                                56,
+                                                55,
+                                                40
+                                            ],
+                                            "borderColor": "rgb(255, 99, 132)",
+                                            "backgroundColor": "rgba(255, 99, 132, 0.5)"
+                                        },
+                                        {
+                                            "label": "Dataset 2",
+                                            "data": [
+                                                1,
+                                                9,
+                                                20,
+                                                61,
+                                                16,
+                                                5,
+                                                12
+                                            ],
+                                            "borderColor": "rgb(53, 162, 235)",
+                                            "backgroundColor": "rgba(53, 162, 235, 0.5)"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "id": "raw-materials-consumption",
+                            "title": "Consumo de materias primas",
+                            "subtitle": "Consumo de energía dentro de la organización distinguiendo por renovable y no renovable.",
+                            "type": "line",
+                            "chartData": [
+                                {
+                                    "labels": [
+                                        "January",
+                                        "February",
+                                        "March",
+                                        "April",
+                                        "May",
+                                        "June",
+                                        "July"
+                                    ],
+                                    "datasets": [
+                                        {
+                                            "label": "Dataset 1",
+                                            "data": [
+                                                65,
+                                                59,
+                                                80,
+                                                81,
+                                                56,
+                                                55,
+                                                40
+                                            ],
+                                            "borderColor": "rgb(255, 99, 132)",
+                                            "backgroundColor": "rgba(255, 99, 132, 0.5)"
+                                        },
+                                        {
+                                            "label": "Dataset 2",
+                                            "data": [
+                                                1,
+                                                9,
+                                                20,
+                                                61,
+                                                16,
+                                                5,
+                                                12
+                                            ],
+                                            "borderColor": "rgb(53, 162, 235)",
+                                            "backgroundColor": "rgba(53, 162, 235, 0.5)"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

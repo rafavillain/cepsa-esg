@@ -1,0 +1,152 @@
+* {
+  box-sizing: border-box;
+}
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font: 400 1em/1.35 serif;
+  text-align: left;
+  vertical-align: baseline;
+  color: #333;
+}
+
+body,
+ol, ul, li,
+dl, dt, dd,
+address,
+abbr, dfn,
+blockquote, pre, code, kbd, samp, cite, q,
+figcaption,
+sub, sup, small,
+p, h1, h2, h3, h4, h5, h6 {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  text-align: inherit;
+  vertical-align: inherit;
+  color: inherit;
+}
+
+body, html {
+  overflow-x: hidden;
+}
+
+body {
+  background-color: #fff;
+  text-align: left;
+  font-family: "flamabook", sans-serif;
+}
+
+b,
+strong {
+  font-weight: normal;
+}
+
+i,
+em,
+dfn {
+  font-style: italic;
+}
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+pre,
+code,
+kbd,
+samp {
+  font: monospace;
+}
+
+pre {
+  white-space: pre;/* CSS2 */
+  white-space: pre-wrap;/* CSS 2.1 */
+  white-space: pre-line;/* CSS 3 (and 2.1 as well, actually) */
+  word-wrap: break-word;/* IE */
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after {
+  content: '';
+  content: none;
+}
+
+small {
+  font-size: 75%;
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+a {
+  background-color: transparent;/* remove IE 10 grey bg on :active */
+  text-decoration: none;
+}
+
+a:link, a:visited, a:active, a:hover, a:focus {
+  outline: none;
+}
+
+a[href^="tel"] {
+  color: inherit;
+}
+
+
+ol, ul, li {
+  list-style: none;
+  list-style-image: none;
+  padding: 0;
+}
+
+body,
+ol, ul, li,
+dl, dt, dd,
+address,
+abbr, dfn,
+blockquote, pre, code, kbd, samp, cite, q,
+figcaption, small,
+p, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+ol, ul, li {
+  line-height: inherit;
+}
+
+figure, 
+img {
+  margin: 0
+}

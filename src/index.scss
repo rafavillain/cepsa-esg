@@ -1,39 +1,14 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #fff;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
 body {
   margin: 0;
 }
 
 * {
   box-sizing: border-box;
+}
+
+p {
+  color: #213547;
+  margin: 0;
 }
 
 button {
@@ -43,7 +18,8 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: #fff;
+  border: 1px solid grey;
   cursor: pointer;
   transition: border-color 0.25s;
 }
@@ -71,21 +47,166 @@ button:focus-visible {
 .App {
   display: flex;
   flex-direction: column;
-  max-width: 1200px;
+  max-width: 1264px;
   margin: auto;
-  padding: 24px;
-}
+  padding: 0 32px;
 
-.chart-container {
-  width: 100%;
-  height: 70vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 24px;
-  margin-top: 24px;
+  &__main-selectors {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    padding: 32px 24px;
+    
+    .chart-selector {
+      display: flex;
+    }
+  }
+
+  &__main {
+    background-color: #fbfbfb;
+    border-radius: 8px;
+    padding: 16px 24px;
+  }
+
+  &__intro {
+    display: flex;
+    padding: 16px 0;
+    align-items: center;
+    gap: 64px;
+    justify-content: space-between;
+  }
+
+  &__intro-text {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    color: #263746;
+    font-size: 18px;
+    margin: 0;
+    font-size: 20px;
+  }
+
+  &__subtitle {
+    font-size: 12px;
+    color: #67737D;
+  }
+
+  &__group-selector {
+    display: flex;
+    flex-direction: column;
+    padding: 16px 0;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  &__chart-container {
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    margin-top: 24px;
+    width: 100%;
+    height: 293px;
+  }
+
+  &__chart-bottom-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    align-items: center;
+    padding: 24px 0;
+  }
 }
 
 select {
-  height: 40px;
+  display: flex;
+  padding: 9px 12px;
+  align-items: center;
+  gap: 8px;
+  flex: 1 0 0;
+}
+
+.hide {
+  display: none;
+}
+
+// chart dropdown
+.download-chart {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+
+  &__trigger {
+    background: rgba($color: #263746, $alpha: 0.08);
+    border-radius: 32px;
+    z-index: 1;
+    border: none;
+  }
+
+  &__dropdown {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 100%;
+    top: 0;
+    background: rgba($color: #263746, $alpha: 0.08);
+    width: 100%;
+    padding-top: 40px;
+    z-index: 0;
+    border-radius: 22px;
+    padding-bottom: 4px;
+
+    &--hidden {
+      display: none;
+    }
+  }
+
+  &__btn {
+    align-items: flex-start;
+    display: flex;
+    border: none;
+    background: none;
+  }
+}
+
+// chart custom legend
+.custom-legend {
+  display: flex;
+  gap: 24px;
+
+  &__item {
+    display: flex;
+  }
+
+  &__color {
+    display: flex;
+    height: 16px;
+    width: 16px;
+    border-radius: 4px;
+    margin-right: 8px;
+  }
+
+  &__label {
+    font-size: 12px;
+    line-height: 140%;
+  }
+}
+
+// chart reference
+.ref {
+  display: flex;
+  align-items: center;
+
+  p {
+    padding: 2px 4px;
+    border-radius: 4px;
+    background-color: #F2F2F1;
+    color: #67737D;
+    font-size: 12px;
+    line-height: 140%;
+  }
 }

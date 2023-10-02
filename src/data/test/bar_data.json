@@ -1,0 +1,25 @@
+{
+  "title": "Consumo energético dentro de la organización",
+  "subtitle": "Consumo de energía dentro de la organización distinguiendo por renovable y no renovable.",
+  "labels": ["2019", "2020", "2021", "2022", "2023"],
+  "datasets": [
+    {
+      "label": "Electricidad renovable",
+      "data": [1200377, 1176026, 4051166, 4579718, 0],
+      "backgroundColor": "rgb(38 55 70)",
+      "stack": "combined",
+      "borderColor": "transparent",
+      "borderWidth": 2,
+      "borderRadius": 4
+    },
+    {
+      "label": "Electricidad no renovable",
+      "data": [5604581, 5542132, 1472328, 1452931, 0],
+      "backgroundColor": "rgb(150, 211, 221)",
+      "stack": "combined",
+      "borderColor": "transparent",
+      "borderWidth": 2,
+      "borderRadius": 4
+    }
+  ]
+}
