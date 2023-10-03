@@ -55,7 +55,17 @@
                                         }
                                     ]
                                 }
-                            ]
+                            ],
+                            "options": {
+                                
+                                "scales": {
+                                    "y": {
+                                        "title": {
+                                            "text": "Your Title test"
+                                        }
+                                    }
+                                }
+                            }
                         },
                         {
                             "id": "out-of-organization-energy-consumption",

@@ -12,7 +12,6 @@ import ChartEsgTitle from "./ChartEsgTitle";
 import ChartEsgDownload from "./ChartEsgDownload";
 
 import BarChart from "./BarChart";
-import BarOptions from "../options/bar_options";
 
 import LineChart from "./LineChart";
 import LineOptions from "../options/line_options";
@@ -74,7 +73,7 @@ export default function ChartEsg({ chart }) {
     const chartRender = () => {
         switch (chartType) {
             case "bar":
-                return <BarChart chartData={chartFinalData} chartOptions={BarOptions} />;
+                return <BarChart chartData={chartFinalData} chartOptions={chart.options} />;
             case "line":
                 return <LineChart chartData={chartFinalData} chartOptions={LineOptions} />;
             case "pie":
