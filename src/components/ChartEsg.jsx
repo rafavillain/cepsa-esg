@@ -43,7 +43,7 @@ export default function ChartEsg({ chart }) {
     const chartFinalDatasets = chartDatasets ? chartDatasets : chartDatasets4;
 
     // download chart as image
-    const downloadImage = () => {
+    const downloadImage = (e) => {
         let input = document.querySelector('[data-print]');
 
         html2canvas(input).then(canvas => {
@@ -96,42 +96,46 @@ export default function ChartEsg({ chart }) {
 
     return (
         <>
-            <div className="App__main" data-print>
-                <div className="App__intro">
-                    <ChartEsgTitle
-                        title={chartTitle}
-                        subtitle={chartSubtitle}
-                    ></ChartEsgTitle>
+            <div className="App__main-outer">
+                <ChartEsgDownload
+                    chartDownloadImage={downloadImage}
+                    chartDownloadPdf={downloadPdf}
+                >
+                </ChartEsgDownload>
 
-                    <ChartEsgDownload
-                        chartDownloadImage={downloadImage}
-                        chartDownloadPdf={downloadPdf}
-                    >
-                    </ChartEsgDownload>
-                </div>
+                <div className="App__main" data-print>
+                    <div className="App__intro">
+                        <ChartEsgTitle
+                            title={chartTitle}
+                            subtitle={chartSubtitle}
+                        ></ChartEsgTitle>
 
-                {chart.elements_lvl4 &&
-                    <ChartEsgMainSelector
-                        value={selector4Value}
-                        name="name 4"
-                        id="selector4"
-                        options={chart.elements_lvl4}
-                        onChange={handleChangeSelector4}
-                    />
-                }
-
-                {chartRender()}
-
-                <div className="App__chart-bottom-content">
-                    <div className="App__chart-bottom-content-refs">
-                        {chartFinalDatasets && 
-                            <ChartEsgCustomLegend data={chartFinalDatasets} />
-                        }
-
-                        <ChartEsgRef chartRef={chartRefs} />
+                        
                     </div>
-                    
-                    <ChartEsgNote chartNote={chartNote} />
+
+                    {chart.elements_lvl4 &&
+                        <ChartEsgMainSelector
+                            value={selector4Value}
+                            name="name 4"
+                            id="selector4"
+                            options={chart.elements_lvl4}
+                            onChange={handleChangeSelector4}
+                        />
+                    }
+
+                    {chartRender()}
+
+                    <div className="App__chart-bottom-content">
+                        <div className="App__chart-bottom-content-refs">
+                            {chartFinalDatasets && 
+                                <ChartEsgCustomLegend data={chartFinalDatasets} />
+                            }
+
+                            <ChartEsgRef chartRef={chartRefs} />
+                        </div>
+                        
+                        <ChartEsgNote chartNote={chartNote} />
+                    </div>
                 </div>
             </div>
         </>

@@ -79,6 +79,10 @@ button:focus-visible {
     }
   }
 
+  &__main-outer {
+    position: relative;
+  }
+
   &__main {
     background-color: #fbfbfb;
     border-radius: 8px;
@@ -95,11 +99,13 @@ button:focus-visible {
     align-items: center;
     gap: 64px;
     justify-content: space-between;
+    max-width: calc(100% - 140px);
 
     @media (max-width: 768px) {
       flex-direction: column;
       align-items: flex-start;
       gap: 24px;
+      max-width: none;
     }
   }
 
@@ -182,8 +188,14 @@ select {
 // chart dropdown
 .download-chart {
   display: flex;
-  justify-content: flex-end;
-  position: relative;
+  position: absolute;
+  right: 24px;
+  top: 24px;
+
+  @media (max-width: 768px) {
+    position: static;
+    margin-bottom: 8px;
+  }
 
   &__trigger {
     background: rgba($color: #263746, $alpha: 0.08);
