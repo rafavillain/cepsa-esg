@@ -1,8 +1,9 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 import ChartEsgCustomLegend from './ChartEsgCustomLegend';
 import ChartEsgMainSelector from "./ChartEsgMainSelector"
 import ChartEsgRef from "./ChartEsgRef";
+import ChartEsgNote from "./ChartEsgNote";
 import html2canvas from "html2canvas";
 import pdfConverter from "jspdf";
 
@@ -12,15 +13,10 @@ import ChartEsgTitle from "./ChartEsgTitle";
 import ChartEsgDownload from "./ChartEsgDownload";
 
 import BarChart from "./BarChart";
-
 import LineChart from "./LineChart";
-import LineOptions from "../options/line_options";
-
 import PieChart from "./PieChart";
-import PieOptions from "../options/pie_options";
-
 import DoughnutChart from "./DoughnutChart";
-import DoughnutOptions from "../options/doughnut_options";
+import ScatterChart from "./ScatterChart";
 
 import { chartBaseConfig } from '../config/base_config'
 import { Chart } from 'chart.js'
@@ -30,15 +26,21 @@ chartBaseConfig(Chart)
 export default function ChartEsg({ chart }) {
     const [selector4Value, setSelector4Value] = useState('');
     const [selector4Index, setSelector4Index] = useState(0);
-    const type4 = chart.elements_lvl4 ? chart.elements_lvl4[0].type : '';
-    const chartType = type4 ? type4 : chart.type;
+    const chartElementsLvl4 = chart.elements_lvl4;
     const chartTitle = chart.title;
     const chartSubtitle = chart.subtitle;
-    const chartData = chart.chartData ? chart.chartData[0] : null;
-    const chartDatasets = chartData ? chartData.datasets : null;
 
-    const chartData4 = chart.elements_lvl4 ? chart.elements_lvl4[selector4Index].chartData[0] : null;
+    const chartType = chartElementsLvl4 ? chartElementsLvl4[0].type : chart.type;
+    const chartOptions = chartElementsLvl4 ? chartElementsLvl4[selector4Index].options : chart.options;
+    const chartNote = chartElementsLvl4 ? chartElementsLvl4[selector4Index].note : chart.note;
+    const chartRefs = chartElementsLvl4 ? chartElementsLvl4[selector4Index].refs : chart.refs;
+    
+    const chartData = chart.chartData ? chart.chartData[0] : null;
+    const chartData4 = chartElementsLvl4 ? chartElementsLvl4[selector4Index].chartData[0] : null;
     const chartFinalData = chartData ? chartData : chartData4;
+    const chartDatasets = chartData ? chartData.datasets : null;
+    const chartDatasets4 = chartData4 ? chartData4.datasets : null;
+    const chartFinalDatasets = chartDatasets ? chartDatasets : chartDatasets4;
 
     // download chart as image
     const downloadImage = () => {
@@ -78,13 +80,15 @@ export default function ChartEsg({ chart }) {
     const chartRender = () => {
         switch (chartType) {
             case "bar":
-                return <BarChart chartData={chartFinalData} chartOptions={chart.options} />;
+                return <BarChart chartData={chartFinalData} chartOptions={chartOptions} />;
             case "line":
-                return <LineChart chartData={chartFinalData} chartOptions={chart.options} />;
+                return <LineChart chartData={chartFinalData} chartOptions={chartOptions} />;
             case "pie":
-                return <PieChart chartData={chartFinalData} chartOptions={chart.options} />;
+                return <PieChart chartData={chartFinalData} chartOptions={chartOptions} />;
             case "doughnut":
-                return <DoughnutChart chartData={chartFinalData} chartOptions={chart.options} />;
+                return <DoughnutChart chartData={chartFinalData} chartOptions={chartOptions} />;
+            case "scatter":
+                return <ScatterChart chartData={chartFinalData} chartOptions={chartOptions} />;
             default:
                 return null;
         }
@@ -119,9 +123,15 @@ export default function ChartEsg({ chart }) {
                 {chartRender()}
 
                 <div className="App__chart-bottom-content">
-                    {chartDatasets && <ChartEsgCustomLegend data={chartDatasets} />}
+                    <div className="App__chart-bottom-content-refs">
+                        {chartFinalDatasets && 
+                            <ChartEsgCustomLegend data={chartFinalDatasets} />
+                        }
 
-                    <ChartEsgRef chartRef="[GRI 302-1/11.1.2]"></ChartEsgRef>
+                        <ChartEsgRef chartRef={chartRefs} />
+                    </div>
+                    
+                    <ChartEsgNote chartNote={chartNote} />
                 </div>
             </div>
         </>

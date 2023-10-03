@@ -12,6 +12,15 @@
                             "id": "organization-energy-consumption",
                             "title": "Consumo energético dentro de la organización",
                             "subtitle": "Consumo de energía dentro de la organización distinguiendo por renovable y no renovable.",
+                            "refs": [
+                                {
+                                    "text": "ref1"
+                                },
+                                {
+                                    "text": "ref2"
+                                }
+                            ],
+                            "note": "Nota: Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus nostrum nihil, amet nam, nesciunt aliquam corporis recusandae fuga maxime eaque quisquam tenetur ullam, reiciendis ex libero. Harum tenetur tempora maxime.",
                             "type": "bar",
                             "chartData": [
                                 {
@@ -57,7 +66,6 @@
                                 }
                             ],
                             "options": {
-                                
                                 "scales": {
                                     "y": {
                                         "title": {
@@ -76,6 +84,15 @@
                                     "id": "gei-emissions-3",
                                     "title": "Emisiones GEI 3",
                                     "subtitle": "Consumo de energía dentro de la organización distinguiendo por renovable y no renovable 3.",
+                                    "refs": [
+                                        {
+                                            "text": "ref3"
+                                        },
+                                        {
+                                            "text": "ref4"
+                                        }
+                                    ],
+                                    "note": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus nostrum nihil, amet nam, nesciunt aliquam corporis recusandae fuga maxime eaque quisquam tenetur ullam, reiciendis ex libero. Harum tenetur tempora maxime.",
                                     "type": "bar",
                                     "chartData": [
                                         {
@@ -122,7 +139,16 @@
                                                 }
                                             ]
                                         }
-                                    ]
+                                    ],
+                                    "options": {
+                                        "scales": {
+                                            "y": {
+                                                "title": {
+                                                    "text": "Your Title test 2"
+                                                }
+                                            }
+                                        }
+                                    }
                                 },
                                 {
                                     "id": "gei-emissions-4",
@@ -182,31 +208,51 @@
                             "id": "energy-intensity",
                             "title": "Intensidad energética",
                             "subtitle": "Consumo de energía dentro de la organización distinguiendo por renovable y no renovable.",
-                            "type": "pie",
+                            "type": "scatter",
                             "chartData": [
                                 {
                                     "labels": [
-                                        "Red",
-                                        "Blue",
-                                        "Yellow"
+                                        "January",
+                                        "February",
+                                        "March",
+                                        "April"
                                     ],
                                     "datasets": [
                                         {
-                                            "label": "Dataset pie 1",
+                                            "type": "line",
+                                            "label": "Line Dataset",
+                                            "backgroundColor": "#263746",
+                                            "borderColor": "#263746",
                                             "data": [
-                                                300,
-                                                50,
-                                                100
-                                            ],
-                                            "backgroundColor": [
-                                                "rgb(255, 99, 132)",
-                                                "rgb(54, 162, 235)",
-                                                "rgb(255, 205, 86)"
+                                                5,
+                                                20,
+                                                10,
+                                                50
+                                            ]
+                                        },
+                                        {
+                                            "type": "bar",
+                                            "label": "Bar Dataset",
+                                            "backgroundColor": "rgb(150 211 221)",
+                                            "data": [
+                                                10,
+                                                20,
+                                                30,
+                                                40
                                             ]
                                         }
                                     ]
                                 }
-                            ]
+                            ],
+                            "options": {
+                                "scales": {
+                                    "y": {
+                                        "title": {
+                                            "text": "Your Title test Scatter"
+                                        }
+                                    }
+                                }
+                            }
                         }
                     ]
                 },

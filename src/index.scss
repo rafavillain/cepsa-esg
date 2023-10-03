@@ -114,11 +114,24 @@ button:focus-visible {
   }
 
   &__chart-bottom-content {
+    gap: 16px;
+  }
+
+  &__chart-bottom-content-refs {
     display: flex;
     justify-content: space-between;
     gap: 12px;
     align-items: center;
     padding: 24px 0;
+  }
+
+  &__chart-bottom-content-note {
+    color: #67737D;
+    font-family: Flama;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%; /* 16.8px */
   }
 }
 
@@ -200,6 +213,8 @@ select {
 .ref {
   display: flex;
   align-items: center;
+  margin-left: auto;
+  gap: 8px;
 
   p {
     padding: 2px 4px;

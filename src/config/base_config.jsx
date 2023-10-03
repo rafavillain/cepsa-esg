@@ -7,7 +7,7 @@ export const chartBaseConfig = (Chart) => {
     Chart.defaults.plugins.legend.tooltip.position = 'nearest'
     Chart.defaults.backgroundColor = '#ff0000'
 
-    console.log(Chart.defaults);
+    // console.log(Chart.defaults);
 }
 
 

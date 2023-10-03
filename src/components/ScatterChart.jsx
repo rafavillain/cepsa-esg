@@ -1,7 +1,7 @@
-import { Bar } from "react-chartjs-2";
+import { Scatter } from "react-chartjs-2";
 import externalTooltipHandler from "../config/tooltip_config"
 
-export default function BarChart({ chartData, chartOptions }) {
+export default function ScatterChart({ chartData, chartOptions }) {
     // Base options. Add custom options depending on chart data from charts_data.json (for example: chartOptions.scales.y.title.text)
     const options = {
         barThickness: 40,
@@ -33,7 +33,7 @@ export default function BarChart({ chartData, chartOptions }) {
     return (
         <>
             <div className="App__chart-container">
-                <Bar
+                <Scatter
                     data={chartData}
                     options={options}
                 />
