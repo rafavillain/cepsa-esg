@@ -22,6 +22,11 @@ import PieOptions from "../options/pie_options";
 import DoughnutChart from "./DoughnutChart";
 import DoughnutOptions from "../options/doughnut_options";
 
+import { chartBaseConfig } from '../config/base_config'
+import { Chart } from 'chart.js'
+
+chartBaseConfig(Chart)
+
 export default function ChartEsg({ chart }) {
     const [selector4Value, setSelector4Value] = useState('');
     const [selector4Index, setSelector4Index] = useState(0);
@@ -75,11 +80,11 @@ export default function ChartEsg({ chart }) {
             case "bar":
                 return <BarChart chartData={chartFinalData} chartOptions={chart.options} />;
             case "line":
-                return <LineChart chartData={chartFinalData} chartOptions={LineOptions} />;
+                return <LineChart chartData={chartFinalData} chartOptions={chart.options} />;
             case "pie":
-                return <PieChart chartData={chartFinalData} chartOptions={PieOptions} />;
+                return <PieChart chartData={chartFinalData} chartOptions={chart.options} />;
             case "doughnut":
-                return <DoughnutChart chartData={chartFinalData} chartOptions={DoughnutOptions} />;
+                return <DoughnutChart chartData={chartFinalData} chartOptions={chart.options} />;
             default:
                 return null;
         }

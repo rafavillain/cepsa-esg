@@ -2,7 +2,7 @@ import { Bar } from "react-chartjs-2";
 import externalTooltipHandler from "../config/tooltip_config"
 
 export default function BarChart({ chartData, chartOptions }) {
-    // Aase options. Add custom options depending on chart data from charts_data.json (for example: chartOptions.scales.y.title.text)
+    // Base options. Add custom options depending on chart data from charts_data.json (for example: chartOptions.scales.y.title.text)
     const options = {
         barThickness: 40,
         borderRadius: 10,
@@ -12,8 +12,8 @@ export default function BarChart({ chartData, chartOptions }) {
         scales: {
             y: {
                 title: {
-                    display: true,
-                    text: chartOptions.scales.y.title.text
+                    display: chartOptions != undefined ? true : false,
+                    text: chartOptions != undefined ? chartOptions.scales.y.title.text : ''
                 }
             }
         },
