@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 import ChartEsgCustomLegend from './ChartEsgCustomLegend';
 import ChartEsgMainSelector from "./ChartEsgMainSelector"
@@ -11,16 +11,16 @@ import pdfConverter from "jspdf";
 import ChartEsgTitle from "./ChartEsgTitle";
 import ChartEsgDownload from "./ChartEsgDownload";
 
-import BarChart from "./BarChart";
+import { Bar } from "react-chartjs-2";
 import BarOptions from "../options/bar_options";
 
-import LineChart from "./LineChart";
+import { Line } from "react-chartjs-2";
 import LineOptions from "../options/line_options";
 
-import PieChart from "./PieChart";
+import { Pie } from "react-chartjs-2";
 import PieOptions from "../options/pie_options";
 
-import DoughnutChart from "./DoughnutChart";
+import { Doughnut } from "react-chartjs-2";
 import DoughnutOptions from "../options/doughnut_options";
 
 export default function ChartEsg({ chart }) {
@@ -74,13 +74,13 @@ export default function ChartEsg({ chart }) {
     const chartRender = () => {
         switch (chartType) {
             case "bar":
-                return <BarChart chartData={chartFinalData} chartOptions={BarOptions} />;
+                return <Bar data={chartFinalData} options={BarOptions} />;
             case "line":
-                return <LineChart chartData={chartFinalData} chartOptions={LineOptions} />;
+                return <Line data={chartFinalData} options={LineOptions} />;
             case "pie":
-                return <PieChart chartData={chartFinalData} chartOptions={PieOptions} />;
+                return <Pie data={chartFinalData} options={PieOptions} />;
             case "doughnut":
-                return <DoughnutChart chartData={chartFinalData} chartOptions={DoughnutOptions} />;
+                return <Doughnut data={chartFinalData} options={DoughnutOptions} />;
             default:
                 return null;
         }
@@ -112,7 +112,9 @@ export default function ChartEsg({ chart }) {
                     />
                 }
 
-                {chartRender()}
+                <div className="App__chart-container">
+                    {chartRender()}
+                </div>
 
                 <div className="App__chart-bottom-content">
                     {chartDatasets && <ChartEsgCustomLegend data={chartDatasets} />}
