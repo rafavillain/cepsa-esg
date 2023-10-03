@@ -51,14 +51,31 @@ button:focus-visible {
   margin: auto;
   padding: 0 32px;
 
+  @media (max-width: 768px) {
+    padding: 0 16px;
+  }
+
   &__main-selectors {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 8px;
     padding: 32px 24px;
+
+    @media (max-width: 768px) {
+      padding: 24px 16px;
+    }
     
     .chart-selector {
       display: flex;
+
+      @media (max-width: 768px) {
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 768px) {
+      display: flex;
+      flex-direction: column;
     }
   }
 
@@ -66,6 +83,10 @@ button:focus-visible {
     background-color: #fbfbfb;
     border-radius: 8px;
     padding: 16px 24px;
+
+    @media (max-width: 768px) {
+      padding: 0 16px;
+    }
   }
 
   &__intro {
@@ -74,6 +95,12 @@ button:focus-visible {
     align-items: center;
     gap: 64px;
     justify-content: space-between;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 24px;
+    }
   }
 
   &__intro-text {
@@ -123,6 +150,11 @@ button:focus-visible {
     gap: 12px;
     align-items: center;
     padding: 24px 0;
+
+    @media (max-width: 768px) {
+      padding-top: 32px;
+      align-items: flex-start;
+    }
   }
 
   &__chart-bottom-content-note {
@@ -190,6 +222,11 @@ select {
 .custom-legend {
   display: flex;
   gap: 24px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 16px;
+  }
 
   &__item {
     display: flex;
