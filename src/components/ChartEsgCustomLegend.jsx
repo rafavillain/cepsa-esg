@@ -1,5 +1,4 @@
 export default function ChartEsgLegend({ data }) {
-    console.log(data);
     return (
         <div className="custom-legend">
             {data.map((item, index) => (

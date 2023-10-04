@@ -10,11 +10,24 @@ export default function BarChart({ chartData, chartOptions }) {
         hoverBorderWidth: 4,
         hoverBorderColor: 'rgba(38, 55, 70, 0.1)',
         scales: {
-            y: {
+            'left-y-axis': {
+                display: chartOptions != undefined && chartOptions.scales.y.left ? true : false,
+                type: 'linear',
+                position: 'left',
                 title: {
                     display: chartOptions != undefined ? true : false,
-                    text: chartOptions != undefined ? chartOptions.scales.y.title.text : '',
-                    padding: 8
+                    text: chartOptions != undefined && chartOptions.scales.y.left != undefined ? chartOptions.scales.y.left.title : '',
+                    padding: 16
+                }
+            },
+            'right-y-axis': {
+                display: chartOptions != undefined && chartOptions.scales.y.right ? true : false,
+                type: 'linear',
+                position: 'right',
+                title: {
+                    display: chartOptions != undefined ? true : false,
+                    text: chartOptions != undefined && chartOptions.scales.y.right != undefined ? chartOptions.scales.y.right.title : '',
+                    padding: 16
                 }
             }
         },

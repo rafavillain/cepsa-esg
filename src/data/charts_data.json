@@ -33,6 +33,7 @@
                                     ],
                                     "datasets": [
                                         {
+                                            "yAxisID": "left-y-axis",
                                             "label": "Electricidad renovable",
                                             "data": [
                                                 1200377,
@@ -48,6 +49,7 @@
                                             "borderRadius": 4
                                         },
                                         {
+                                            "yAxisID": "left-y-axis",
                                             "label": "Electricidad no renovable",
                                             "data": [
                                                 5604581,
@@ -68,8 +70,8 @@
                             "options": {
                                 "scales": {
                                     "y": {
-                                        "title": {
-                                            "text": "Your Title test"
+                                        "left": {
+                                            "title": "test title left"
                                         }
                                     }
                                 }
@@ -117,7 +119,8 @@
                                                     "stack": "combined",
                                                     "borderColor": "transparent",
                                                     "borderWidth": 2,
-                                                    "borderRadius": 4
+                                                    "borderRadius": 4,
+                                                    "yAxisID": "left-y-axis"
                                                 },
                                                 {
                                                     "label": "Alcance 2 (ubicación)",
@@ -126,7 +129,8 @@
                                                     "stack": "combined",
                                                     "borderColor": "transparent",
                                                     "borderWidth": 2,
-                                                    "borderRadius": 4
+                                                    "borderRadius": 4,
+                                                    "yAxisID": "left-y-axis"
                                                 },
                                                 {
                                                     "label": "Alcance 2 (mercado)",
@@ -135,7 +139,8 @@
                                                     "stack": "combined",
                                                     "borderColor": "transparent",
                                                     "borderWidth": 2,
-                                                    "borderRadius": 4
+                                                    "borderRadius": 4,
+                                                    "yAxisID": "left-y-axis"
                                                 }
                                             ]
                                         }
@@ -143,8 +148,8 @@
                                     "options": {
                                         "scales": {
                                             "y": {
-                                                "title": {
-                                                    "text": "Your Title test 2"
+                                                "left": {
+                                                    "title": "test title left 2"
                                                 }
                                             }
                                         }
@@ -212,10 +217,11 @@
                             "chartData": [
                                 {
                                     "labels": [
-                                        "January",
-                                        "February",
-                                        "March",
-                                        "April"
+                                        "2019",
+                                        "2020",
+                                        "2021",
+                                        "2022",
+                                        "2023"
                                     ],
                                     "datasets": [
                                         {
@@ -224,22 +230,26 @@
                                             "backgroundColor": "#263746",
                                             "borderColor": "#263746",
                                             "data": [
-                                                5,
+                                                50,
                                                 20,
                                                 10,
-                                                50
-                                            ]
+                                                50,
+                                                20
+                                            ],
+                                            "yAxisID": "left-y-axis"
                                         },
                                         {
                                             "type": "bar",
                                             "label": "Bar Dataset",
                                             "backgroundColor": "rgb(150 211 221)",
                                             "data": [
-                                                10,
-                                                20,
-                                                30,
-                                                40
-                                            ]
+                                                100,
+                                                200,
+                                                300,
+                                                400,
+                                                202
+                                            ],
+                                            "yAxisID": "right-y-axis"
                                         }
                                     ]
                                 }
@@ -247,8 +257,11 @@
                             "options": {
                                 "scales": {
                                     "y": {
-                                        "title": {
-                                            "text": "Your Title test Scatter"
+                                        "left": {
+                                            "title": "test title left scatter"
+                                        },
+                                        "right": {
+                                            "title": "test title right scatter"
                                         }
                                     }
                                 }

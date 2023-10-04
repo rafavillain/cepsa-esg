@@ -2,7 +2,10 @@ import { Scatter } from "react-chartjs-2";
 import externalTooltipHandler from "../config/tooltip_config"
 
 export default function ScatterChart({ chartData, chartOptions }) {
-    // Base options. Add custom options depending on chart data from charts_data.json (for example: chartOptions.scales.y.title.text)
+    // const scaleYLeftId = chartData
+    console.log(chartData);
+    console.log(chartOptions);
+
     const options = {
         barThickness: 40,
         borderRadius: 10,
@@ -10,11 +13,23 @@ export default function ScatterChart({ chartData, chartOptions }) {
         hoverBorderWidth: 4,
         hoverBorderColor: 'rgba(38, 55, 70, 0.1)',
         scales: {
-            y: {
+            'left-y-axis': {
+                type: 'linear',
+                position: 'left',
                 title: {
                     display: chartOptions != undefined ? true : false,
-                    text: chartOptions != undefined ? chartOptions.scales.y.title.text : '',
-                    padding: 8
+                    text: chartOptions != undefined && chartOptions.scales.y.left != undefined ? chartOptions.scales.y.left.title : '',
+                    padding: 16
+                } 
+            },
+            'right-y-axis': {
+                display: chartOptions.scales.y.right ? true : false,
+                type: 'linear',
+                position: 'right',
+                title: {
+                    display: chartOptions != undefined ? true : false,
+                    text: chartOptions != undefined && chartOptions.scales.y.right != undefined ? chartOptions.scales.y.right.title : '',
+                    padding: 16
                 }
             }
         },
