@@ -7,6 +7,7 @@ const chartConfig = (chartOptions) => {
         borderRadius: 10,
         hoverBorderWidth: 4,
         hoverBorderColor: 'rgba(38, 55, 70, 0.1)',
+        barThickness: 40,
         scale: {
             grid: {
                 drawBorder: false
