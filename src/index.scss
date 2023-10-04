@@ -233,7 +233,8 @@ select {
 // chart custom legend
 .custom-legend {
   display: flex;
-  gap: 24px;
+  gap: 8px 24px;
+  flex-wrap: wrap;
 
   @media (max-width: 768px) {
     flex-direction: column;
