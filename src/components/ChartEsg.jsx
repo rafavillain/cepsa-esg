@@ -18,11 +18,6 @@ import PieChart from "./PieChart";
 import DoughnutChart from "./DoughnutChart";
 import ScatterChart from "./ScatterChart";
 
-import { chartBaseConfig } from '../config/base_config'
-import { Chart } from 'chart.js'
-
-chartBaseConfig(Chart)
-
 export default function ChartEsg({ chart }) {
     const [selector4Value, setSelector4Value] = useState('');
     const [selector4Index, setSelector4Index] = useState(0);

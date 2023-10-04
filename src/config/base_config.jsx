@@ -1,14 +1,56 @@
-export const chartBaseConfig = (Chart) => {
-    Chart.defaults.responsive = true
-    Chart.defaults.maintainAspectRatio = false
-    Chart.defaults.scale.grid.drawBorder = false
-    Chart.defaults.plugins.legend.display = false
-    Chart.defaults.plugins.legend.tooltip = { enabled: false }
-    Chart.defaults.plugins.legend.tooltip.position = 'nearest'
-    Chart.defaults.backgroundColor = '#ff0000'
+import externalTooltipHandler from "./tooltip_config";
 
-    // console.log(Chart.defaults);
-}
+const chartConfig = (chartOptions) => {
+    const options = {
+        responsive: true,
+        maintainAspectRatio: false,
+        borderRadius: 10,
+        hoverBorderWidth: 4,
+        hoverBorderColor: 'rgba(38, 55, 70, 0.1)',
+        scale: {
+            grid: {
+                drawBorder: false
+            }
+        },
+        scales: {
+            'left-y-axis': {
+                display: chartOptions != undefined && chartOptions.scales.y.left ? true : false,
+                type: 'linear',
+                position: 'left',
+                title: {
+                    display: chartOptions != undefined ? true : false,
+                    text: chartOptions != undefined && chartOptions.scales.y.left != undefined ? chartOptions.scales.y.left.title : '',
+                    padding: 16
+                }
+            },
+            'right-y-axis': {
+                display: chartOptions != undefined && chartOptions.scales.y.right ? true : false,
+                type: 'linear',
+                position: 'right',
+                title: {
+                    display: chartOptions != undefined ? true : false,
+                    text: chartOptions != undefined && chartOptions.scales.y.right != undefined ? chartOptions.scales.y.right.title : '',
+                    padding: 16
+                }
+            }
+        },
+        interaction: {
+            mode: 'index',
+            intersect: false,
+        },
+        plugins: {
+            legend: {
+                display: false
+            },
+            tooltip: {
+                enabled: false,
+                position: 'nearest',
+                external: externalTooltipHandler
+            }
+        }
+    }
 
+    return options;
+};
 
-export default chartBaseConfig;
+export default chartConfig;

@@ -1,30 +1,19 @@
 import { Doughnut } from "react-chartjs-2";
-import ChartEsgMainSelector from "./ChartEsgMainSelector";
-import { useState } from "react";
+import chartConfig from "../config/base_config"
 
 export default function DoughnutChart({ chartData, chartOptions }) {
-    const [selector4Value, setSelector4Value] = useState('');
-
-    const handleChangeSelector4 = (e) => {
-        setSelector4Value(e.target.value)
-    }
+    // base and common config
+    const baseOptions = chartConfig(chartOptions);
+    // custom config, where we can add or rewrite base options
+    const customOptions = {}
+    const currentChartOptions = Object.assign(baseOptions, customOptions);
 
     return (
         <>
-            {chartData.elements_lvl4 && 
-                <ChartEsgMainSelector
-                    value={selector4Value.id}
-                    name="name 4"
-                    id="selector4"
-                    options={chartData.elements_lvl4[0]}
-                    onChange={handleChangeSelector4}
-                />
-            }
-
             <div className="App__chart-container">
                 <Doughnut
                     data={chartData}
-                    options={chartOptions} 
+                    options={currentChartOptions}
                 />
             </div>
         </>
