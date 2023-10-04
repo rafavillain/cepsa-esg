@@ -6,7 +6,7 @@ export default function BarChart({ chartData, chartOptions }) {
     const baseOptions = chartConfig(chartOptions);
     // custom config, where we can add or rewrite base options
     const customOptions = {
-        barThickness: 40
+        barThickness: chartOptions.barThickness
     }
     const currentChartOptions = Object.assign(baseOptions, customOptions);
 
