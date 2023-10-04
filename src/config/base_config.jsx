@@ -4,7 +4,7 @@ const chartConfig = (chartOptions) => {
     const options = {
         responsive: true,
         maintainAspectRatio: false,
-        borderRadius: 10,
+        borderRadius: 4,
         hoverBorderWidth: 4,
         hoverBorderColor: 'rgba(38, 55, 70, 0.1)',
         barThickness: 40,
