@@ -99,7 +99,7 @@ button:focus-visible {
     align-items: center;
     gap: 64px;
     justify-content: space-between;
-    max-width: calc(100% - 140px);
+    // max-width: calc(100% - 140px);
 
     @media (max-width: 768px) {
       flex-direction: column;
@@ -188,12 +188,13 @@ select {
 // chart dropdown
 .download-chart {
   display: flex;
-  position: absolute;
-  right: 24px;
-  top: 24px;
+  position: relative;
+  // position: absolute;
+  // right: 24px;
+  // top: 24px;
 
   @media (max-width: 768px) {
-    position: static;
+    // position: static;
     margin-bottom: 8px;
   }
 
