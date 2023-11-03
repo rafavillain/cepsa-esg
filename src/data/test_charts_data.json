@@ -1,5 +1,152 @@
 [
     {
+        "id": "id-2-2-3b",
+        "title": "Residuos destinados a eliminación (2.2.3)",
+        "subtitle": "Residuos destinados a eliminación por tipo y operación de eliminación.",
+        "refs": [
+            {
+                "text": "[GRI 306-5/11.5.6]"
+            }
+        ],
+        "type": "bar",
+        "chartData": [
+            {
+                "labels": [
+                    "2023",
+                    "2022",
+                    "2021",
+                    "2020",
+                    "2019"
+                ],
+                "datasets": [
+                    {
+                        "yAxisID": "left-y-axis",
+                        "label": "Incineración (con recuperación energética)",
+                        "data": [
+                            "empty",
+                            "empty",
+                            "empty",
+                            0,
+                            0
+                        ]
+                    },
+                    {
+                        "yAxisID": "left-y-axis",
+                        "label": "Incineración (sin recuperación energética) ",
+                        "data": [
+                            "empty",
+                            52,
+                            1388,
+                            350,
+                            0
+                        ]
+                    },
+                    {
+                        "yAxisID": "left-y-axis",
+                        "label": "Traslado a un vertedero",
+                        "data": [
+                            "empty",
+                            13087,
+                            10480,
+                            15315,
+                            23640
+                        ]
+                    },
+                    {
+                        "yAxisID": "left-y-axis",
+                        "label": "Otras operaciones de eliminación",
+                        "data": [
+                            "empty",
+                            "empty",
+                            "empty",
+                            0,
+                            0
+                        ]
+                    }
+                ]
+            }
+        ],
+        "options": {
+            "scales": {
+                "y": {
+                    "left": {
+                        "title": "Residuos (toneladas)"
+                    }
+                }
+            }
+        }
+    },
+    {
+        "id": "organization-energy-consumption",
+        "title": "Consumo energético dentro de la organización 2",
+        "subtitle": "Consumo de energía dentro de la organización distinguiendo por renovable y no renovable.",
+        "refs": [
+            {
+                "text": "ref1"
+            },
+            {
+                "text": "ref2"
+            }
+        ],
+        "note": "Nota: Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus nostrum nihil, amet nam, nesciunt aliquam corporis recusandae fuga maxime eaque quisquam tenetur ullam, reiciendis ex libero. Harum tenetur tempora maxime.",
+        "type": "bar",
+        "chartData": [
+            {
+                "labels": [
+                    "2019",
+                    "2020",
+                    "2021",
+                    "2022",
+                    "2023"
+                ],
+                "datasets": [
+                    {
+                        "yAxisID": "left-y-axis",
+                        "label": "Electricidad renovable",
+                        "data": [
+                            1200377,
+                            "empty",
+                            1176026,
+                            4051166,
+                            4579718
+                        ],
+                        "backgroundColor": "rgb(38 55 70)",
+                        "stack": "combined",
+                        "borderColor": "transparent",
+                        "borderWidth": 2,
+                        "borderRadius": 4
+                    },
+                    {
+                        "yAxisID": "left-y-axis",
+                        "label": "Electricidad no renovable",
+                        "data": [
+                            5604581,
+                            "empty",
+                            5542132,
+                            1472328,
+                            1452931
+                        ],
+                        "backgroundColor": "rgb(150, 211, 221)",
+                        "stack": "combined",
+                        "borderColor": "transparent",
+                        "borderWidth": 2,
+                        "borderRadius": 4
+                    }
+                ]
+            }
+        ],
+        "options": {
+            "barThickness": 40,
+            "scales": {
+                "y": {
+                    "left": {
+                        "title": "test title left"
+                    }
+                }
+            }
+        }
+    },
+    {
         "id": "id-3-1-1b",
         "title": "Plantilla",
         "subtitle": "Número de empleados por género, edad, país y clasificación profesional.",
@@ -189,8 +336,8 @@
         }
     },
     {
-        "id": "id-3-1-1b",
-        "title": "Plantilla",
+        "id": "id-test-11231",
+        "title": "Plantilla 2",
         "subtitle": "Número de empleados por género, edad, país y clasificación profesional.",
         "refs": [
             {
@@ -392,84 +539,7 @@
         }
     },
     {
-        "id": "test-id",
-        "title": "Residuos destinados a eliminación",
-        "subtitle": "Residuos destinados a eliminación por tipo y operación de eliminación.",
-        "refs": [
-            {
-                "text": "[GRI 306-5/11.5.6]"
-            }
-        ],
-        "type": "bar",
-        "chartData": [
-            {
-                "labels": [
-                    "2019",
-                    "2020",
-                    "2021",
-                    "2022",
-                    "2023"
-                ],
-                "datasets": [
-                    {
-                        "yAxisID": "left-y-axis",
-                        "label": "Incineración (con recuperación energética)",
-                        "data": [
-                            0,
-                            0,
-                            0,
-                            0,
-                            0
-                        ]
-                    },
-                    {
-                        "yAxisID": "left-y-axis",
-                        "label": "Incineración (sin recuperación energética) ",
-                        "data": [
-                            459.8,
-                            349.5,
-                            1388.36,
-                            52.1,
-                            0
-                        ]
-                    },
-                    {
-                        "yAxisID": "left-y-axis",
-                        "label": "Traslado a un vertedero",
-                        "data": [
-                            23640,
-                            15315,
-                            10480,
-                            13087,
-                            0
-                        ]
-                    },
-                    {
-                        "yAxisID": "left-y-axis",
-                        "label": "Otras operaciones de eliminación",
-                        "data": [
-                            0,
-                            0,
-                            0,
-                            0,
-                            0
-                        ]
-                    }
-                ]
-            }
-        ],
-        "options": {
-            "scales": {
-                "y": {
-                    "left": {
-                        "title": "Residuos (toneladas)"
-                    }
-                }
-            }
-        }
-    },
-    {
-        "id": "organization-energy-consumption",
+        "id": "test-organization-energy-consumption",
         "title": "Consumo energético dentro de la organización",
         "subtitle": "Consumo de energía dentro de la organización distinguiendo por renovable y no renovable.",
         "refs": [
@@ -521,76 +591,6 @@
                 "y": {
                     "left": {
                         "title": "Consumo energético (GJ)"
-                    }
-                }
-            }
-        }
-    },
-    {
-        "id": "organization-energy-consumption",
-        "title": "Consumo energético dentro de la organización",
-        "subtitle": "Consumo de energía dentro de la organización distinguiendo por renovable y no renovable.",
-        "refs": [
-            {
-                "text": "ref1"
-            },
-            {
-                "text": "ref2"
-            }
-        ],
-        "note": "Nota: Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus nostrum nihil, amet nam, nesciunt aliquam corporis recusandae fuga maxime eaque quisquam tenetur ullam, reiciendis ex libero. Harum tenetur tempora maxime.",
-        "type": "bar",
-        "chartData": [
-            {
-                "labels": [
-                    "2019",
-                    "2020",
-                    "2021",
-                    "2022",
-                    "2023"
-                ],
-                "datasets": [
-                    {
-                        "yAxisID": "left-y-axis",
-                        "label": "Electricidad renovable",
-                        "data": [
-                            1200377,
-                            1176026,
-                            4051166,
-                            4579718,
-                            0
-                        ],
-                        "backgroundColor": "rgb(38 55 70)",
-                        "stack": "combined",
-                        "borderColor": "transparent",
-                        "borderWidth": 2,
-                        "borderRadius": 4
-                    },
-                    {
-                        "yAxisID": "left-y-axis",
-                        "label": "Electricidad no renovable",
-                        "data": [
-                            5604581,
-                            5542132,
-                            1472328,
-                            1452931,
-                            0
-                        ],
-                        "backgroundColor": "rgb(150, 211, 221)",
-                        "stack": "combined",
-                        "borderColor": "transparent",
-                        "borderWidth": 2,
-                        "borderRadius": 4
-                    }
-                ]
-            }
-        ],
-        "options": {
-            "barThickness": 40,
-            "scales": {
-                "y": {
-                    "left": {
-                        "title": "test title left"
                     }
                 }
             }

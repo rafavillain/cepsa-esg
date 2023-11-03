@@ -13,8 +13,18 @@ import { Bar, Line, Doughnut, Scatter } from "react-chartjs-2";
 import chartConfig from "../config/base_config"
 
 export default function TestChartEsg({ data }) {
+    const [focusOnSearch, setSearchChartFocus] = useState(false)
+    const [clickOnSearch, setSearchChartClick] = useState(false)
+    const [searchTerm, setSearchTerm] = useState('')
+    const [selectedTerm, setSelectedTerm] = useState('')
+    const [filteredData, setFilteredData] = useState([])
+    const [searchValue, setSearchValue] = useState('')
+    const toggleList = focusOnSearch ? '' : 'hide'
+
+    // const mainSearch = focusOnSearch ? '' : 'hide'
+
     // download chart as image
-    const downloadImage = (e) => {
+    const downloadImage = () => {
         let input = document.querySelector('[data-print]');
 
         html2canvas(input).then(canvas => {
@@ -43,74 +53,142 @@ export default function TestChartEsg({ data }) {
         });
     };
 
+    const handleKeyup = (e) => {
+        setSearchChartClick(false)
+        setSearchTerm(e.target.value)
+    }
+
+    const handleFocus = (e) => {
+        setSearchChartFocus(true)
+    }
+
+    const handleBlur = () => {
+        // setSearchChartFocus(false)
+    }
+
+    const selectChart = (e) => {
+        setSelectedTerm(e.target.innerText.toLowerCase())
+        setSearchValue(e.target.innerText)
+        setSearchChartClick(true)
+    }
+
+    useEffect(() => {
+        const filtered = data.filter(chart_data =>
+            chart_data.title.toLowerCase().includes(searchTerm.toLowerCase())
+        )
+
+        setFilteredData(filtered)
+    }, [data, searchTerm])
+
+    useEffect(() => {
+        const filtered = data.filter(chart_data =>
+            chart_data.title.toLowerCase() == selectedTerm.toLowerCase()
+        )
+
+        setFilteredData(filtered)
+        setSearchChartFocus(false)
+    }, [data, selectedTerm])
+
+
     return (
-        <div className="App__main-outer">
-            {data.map((chart) => {
-                const chartId = chart.id
-                const chartData = chart.chartData[0]
-                const chartTitle = chart.title
-                const chartSubtitle = chart.subtitle
-                const chartType = chart.type
-                const chartRefs = chart.refs
-                const chartNote = chart.note
-                const chartDatasets = chartData ? chartData.datasets : null;
+        <>
+            <div className="chart-selection">
+                <input
+                    className='chart-selection__search'
+                    type="text"
+                    defaultValue={searchValue}
+                    onKeyUp={handleKeyup}
+                    onFocus={handleFocus}
+                    onBlur={handleBlur}
+                    placeholder='Elige tu gráfica...'
+                />
 
-                // base and common config
-                const baseOptions = chartConfig(chart.options);
-                // custom config, where we can add or rewrite base options
-                const customOptions = {
-                    barThickness: chart.options ? chart.options.barThickness : baseOptions.barThickness,
-                    borderWidth: chart.options ? chart.options.borderWidth : baseOptions.borderWidth
-                }
-                const chartOptions = Object.assign(baseOptions, customOptions);
+                <ul className={`chart-selection__list ${toggleList}`}>
 
-                return (
-                    <div className="App__main" data-print key={chartId}>
-                        <div className="App__intro">
-                            <ChartEsgTitle
-                                key={`title-of-${chartId}`}
-                                title={chartTitle}
-                                subtitle={chartSubtitle}
-                            ></ChartEsgTitle>
+                    {/* {filteredData.map((chart) => {
+                        return (
+                            <li key={chart.id}>
+                                <button type='button' onClick={selectChart}>{chart.title}</button>
+                            </li>
+                        )
+                    })} */}
 
-                            <ChartEsgDownload
-                                key={`download-of-${chartId}`}
-                                chartDownloadImage={downloadImage}
-                                chartDownloadPdf={downloadPdf}
-                            >
-                            </ChartEsgDownload>
-                        </div>
+                    {data.map((chart) => {
+                        return (
+                            <li className='main-list' key={chart.id}>
+                                <button
+                                    type='button'
+                                    onClick={selectChart}>
+                                    {chart.title}
+                                </button>
+                            </li>
+                        )
+                    })}
 
-                        <p>{chart[0]}</p>
+                </ul>
+            </div>
+            <div className="App__main-outer">
 
-                        {/* <ChartEsgMainSelector
-                            value="value 4"
-                            name="name 4"
-                            id="selector4"
-                            options={chart[0]}
-                        /> */}
+                {clickOnSearch && filteredData.map((chart) => {
+                    const chartId = chart.id
+                    const chartData = chart.chartData[0]
+                    const chartTitle = chart.title
+                    const chartSubtitle = chart.subtitle
+                    const chartType = chart.type
+                    const chartRefs = chart.refs
+                    const chartNote = chart.note
+                    const chartDatasets = chartData ? chartData.datasets : null;
 
-                        <div className="App__chart-container">
-                            {chartType === 'bar' && <Bar data={chartData} options={chartOptions} />}
-                            {chartType === 'line' && <Line data={chartData} options={chartOptions} />}
-                            {chartType === 'doughnut' && <Doughnut data={chartData} options={chartOptions} />}
-                            {chartType === 'scatter' && <Scatter data={chartData} options={chartOptions} />}
-                        </div>
+                    // base and common config
+                    const baseOptions = chartConfig(chart.options);
+                    // custom config, where we can add or rewrite base options
+                    const customOptions = {
+                        barThickness: chart.options ? chart.options.barThickness : baseOptions.barThickness,
+                        borderWidth: chart.options ? chart.options.borderWidth : baseOptions.borderWidth
+                    }
+                    const chartOptions = Object.assign(baseOptions, customOptions);
 
-                        <div className="App__chart-bottom-content">
-                            <div className="App__chart-bottom-content-refs">
-                                {chartDatasets &&
-                                    <ChartEsgCustomLegend data={chartDatasets} />
-                                }
+                    return (
+                        <div className="App__main" data-print key={chartId}>
+                            <div className="App__intro">
+                                <ChartEsgTitle
+                                    key={`title-of-${chartId}`}
+                                    title={chartTitle}
+                                    subtitle={chartSubtitle}
+                                ></ChartEsgTitle>
 
-                                <ChartEsgRef chartRef={chartRefs} />
+                                <ChartEsgDownload
+                                    key={`download-of-${chartId}`}
+                                    chartDownloadImage={downloadImage}
+                                    chartDownloadPdf={downloadPdf}
+                                >
+                                </ChartEsgDownload>
                             </div>
 
-                            <ChartEsgNote chartNote={chartNote} />
+                            {/* <p>{chart[0]}</p> */}
+
+                            <div className="App__chart-container">
+                                {chartType === 'bar' && <Bar data={chartData} options={chartOptions} />}
+                                {chartType === 'line' && <Line data={chartData} options={chartOptions} />}
+                                {chartType === 'doughnut' && <Doughnut data={chartData} options={chartOptions} />}
+                                {chartType === 'scatter' && <Scatter data={chartData} options={chartOptions} />}
+                            </div>
+
+                            <div className="App__chart-bottom-content">
+                                <div className="App__chart-bottom-content-refs">
+                                    {chartDatasets &&
+                                        <ChartEsgCustomLegend data={chartDatasets} />
+                                    }
+
+                                    <ChartEsgRef chartRef={chartRefs} />
+                                </div>
+
+                                <ChartEsgNote chartNote={chartNote} />
+                            </div>
                         </div>
-                    </div>
-                )
-            })}
-        </div>
+                    )
+                })}
+            </div>
+        </>
     )
 }

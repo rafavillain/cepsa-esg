@@ -17,26 +17,31 @@ export default function App() {
     const test_data = test_charts_data;
     const [chart, setSelector] = useState(charts_data);
 
+    const chartsList = () => {
+        {test_data.map((data) => {
+            <p>{data.id}</p>
+            // <li key={data.id}>
+            //     caca
+            //     {data.title}
+            // </li>
+        })}
+    }
+
     return (
         <div className="App">
 
             {/* <ChartMainSelectors
-                data={data} 
+                data={data}
                 setSelector3={setSelector}
+            />
+
+            <ChartEsg
+                chart={chart}
             /> */}
 
             <TestChartEsg
-                data={test_data} 
+                data={test_data}
             />
-            
-            {/* <ChartMainSelectors
-                data={data} 
-                setSelector3={setSelector}
-            />
-
-            <ChartEsg 
-                chart={chart}
-            /> */}
         </div>
     );
 }
