@@ -109,31 +109,61 @@
                                             "datasets": [
                                                 {
                                                     "label": "Artículos y servicios adquiridos",
-                                                    "data": [974814584, 840350989, 881182432, 916549137, 0],
+                                                    "data": [
+                                                        974814584,
+                                                        840350989,
+                                                        881182432,
+                                                        916549137,
+                                                        0
+                                                    ],
                                                     "backgroundColor": "#263746",
                                                     "yAxisID": "left-y-axis"
                                                 },
                                                 {
                                                     "label": "Actividades relacionadas con el combustible y la energía",
-                                                    "data": [10464669, 9247680, 12605341, 11247289, 0],
+                                                    "data": [
+                                                        10464669,
+                                                        9247680,
+                                                        12605341,
+                                                        11247289,
+                                                        0
+                                                    ],
                                                     "backgroundColor": "#96D3DD",
                                                     "yAxisID": "left-y-axis"
                                                 },
                                                 {
                                                     "label": "Transporte y distribución corriente arriba",
-                                                    "data": [19631956, 15512116, 16170663, 15728550, 0],
+                                                    "data": [
+                                                        19631956,
+                                                        15512116,
+                                                        16170663,
+                                                        15728550,
+                                                        0
+                                                    ],
                                                     "backgroundColor": "#3A727A",
                                                     "yAxisID": "left-y-axis"
                                                 },
                                                 {
                                                     "label": "Transporte y distribución corriente abajo",
-                                                    "data": [6629947, 5471002, 5555217, 5734657, 0],
+                                                    "data": [
+                                                        6629947,
+                                                        5471002,
+                                                        5555217,
+                                                        5734657,
+                                                        0
+                                                    ],
                                                     "backgroundColor": "#BEC3C8",
                                                     "yAxisID": "left-y-axis"
                                                 },
                                                 {
                                                     "label": "Uso de los productos vendidos",
-                                                    "data": [786177937, 652632957, 658566498, 711008867, 0],
+                                                    "data": [
+                                                        786177937,
+                                                        652632957,
+                                                        658566498,
+                                                        711008867,
+                                                        0
+                                                    ],
                                                     "backgroundColor": "#67737D",
                                                     "yAxisID": "left-y-axis"
                                                 }
@@ -484,378 +514,102 @@
             ]
         },
         {
-            "id": "environment",
-            "title": "Medio ambiente",
-            "elements_lvl2": [
+            "id": "gei-emissions-3",
+            "title": "Emisiones GEI 3",
+            "subtitle": "Consumo de energía dentro de la organización distinguiendo por renovable y no renovable 3.",
+            "refs": [
                 {
-                    "id": "water",
-                    "title": "Agua",
-                    "elements_lvl3": [
-                        {
-                            "id": "water-extraction",
-                            "title": "Extracción de agua",
-                            "subtitle": "Consumo de energía dentro de la organización distinguiendo por renovable y no renovable.",
-                            "type": "doughnut",
-                            "chartData": [
-                                {
-                                    "labels": [
-                                        "Red",
-                                        "Blue",
-                                        "Yellow"
-                                    ],
-                                    "datasets": [
-                                        {
-                                            "label": "My First Dataset",
-                                            "data": [
-                                                300,
-                                                50,
-                                                100
-                                            ],
-                                            "backgroundColor": [
-                                                "rgb(255, 99, 132)",
-                                                "rgb(54, 162, 235)",
-                                                "rgb(255, 205, 86)"
-                                            ],
-                                            "hoverOffset": 4
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "id": "water-vert",
-                            "title": "Vertido de agua",
-                            "subtitle": "Consumo de energía dentro de la organización distinguiendo por renovable y no renovable.",
-                            "type": "pie",
-                            "chartData": [
-                                {
-                                    "labels": [
-                                        "Red",
-                                        "Blue",
-                                        "Yellow"
-                                    ],
-                                    "datasets": [
-                                        {
-                                            "label": "My First Dataset",
-                                            "data": [
-                                                300,
-                                                50,
-                                                100
-                                            ],
-                                            "backgroundColor": [
-                                                "rgb(255, 99, 132)",
-                                                "rgb(54, 162, 235)",
-                                                "rgb(255, 205, 86)"
-                                            ],
-                                            "hoverOffset": 4
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "id": "water-consumption",
-                            "title": "Consumo de agua",
-                            "subtitle": "Consumo de energía dentro de la organización distinguiendo por renovable y no renovable.",
-                            "type": "line",
-                            "chartData": [
-                                {
-                                    "labels": [
-                                        "January",
-                                        "February",
-                                        "March",
-                                        "April",
-                                        "May",
-                                        "June",
-                                        "July"
-                                    ],
-                                    "datasets": [
-                                        {
-                                            "label": "Dataset 1",
-                                            "data": [
-                                                65,
-                                                59,
-                                                80,
-                                                81,
-                                                56,
-                                                55,
-                                                40
-                                            ],
-                                            "borderColor": "rgb(255, 99, 132)",
-                                            "backgroundColor": "rgba(255, 99, 132, 0.5)"
-                                        },
-                                        {
-                                            "label": "Dataset 2",
-                                            "data": [
-                                                1,
-                                                9,
-                                                20,
-                                                61,
-                                                16,
-                                                5,
-                                                12
-                                            ],
-                                            "borderColor": "rgb(53, 162, 235)",
-                                            "backgroundColor": "rgba(53, 162, 235, 0.5)"
-                                        }
-                                    ]
-                                }
-                            ]
-                        }
-                    ]
+                    "text": "ref3"
                 },
                 {
-                    "id": "waste",
-                    "title": "Residuos",
-                    "elements_lvl3": [
+                    "text": "ref4"
+                }
+            ],
+            "note": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus nostrum nihil, amet nam, nesciunt aliquam corporis recusandae fuga maxime eaque quisquam tenetur ullam, reiciendis ex libero. Harum tenetur tempora maxime.",
+            "type": "line",
+            "chartData": [
+                {
+                    "labels": [
+                        "2019",
+                        "2020",
+                        "2021",
+                        "2022",
+                        "2023"
+                    ],
+                    "datasets": [
                         {
-                            "id": "generated-waste",
-                            "title": "Residuos generados",
-                            "subtitle": "Consumo de energía dentro de la organización distinguiendo por renovable y no renovable.",
-                            "type": "bar",
-                            "chartData": [
-                                {
-                                    "labels": [
-                                        "2019",
-                                        "2020",
-                                        "2021",
-                                        "2022",
-                                        "2023"
-                                    ],
-                                    "datasets": [
-                                        {
-                                            "label": "Electricidad renovable",
-                                            "data": [
-                                                1200377,
-                                                1176026,
-                                                4051166,
-                                                4579718,
-                                                0
-                                            ],
-                                            "backgroundColor": "rgb(38 55 70)",
-                                            "stack": "combined",
-                                            "borderColor": "transparent",
-                                            "borderWidth": 2,
-                                            "borderRadius": 4
-                                        },
-                                        {
-                                            "label": "Electricidad no renovable",
-                                            "data": [
-                                                5604581,
-                                                5542132,
-                                                1472328,
-                                                1452931,
-                                                0
-                                            ],
-                                            "backgroundColor": "rgb(150, 211, 221)",
-                                            "stack": "combined",
-                                            "borderColor": "transparent",
-                                            "borderWidth": 2,
-                                            "borderRadius": 4
-                                        }
-                                    ]
-                                }
-                            ]
+                            "label": "Artículos y servicios adquiridos",
+                            "data": [
+                                974814584,
+                                840350989,
+                                881182432,
+                                916549137,
+                                0
+                            ],
+                            "backgroundColor": "#263746",
+                            "yAxisID": "left-y-axis"
                         },
                         {
-                            "id": "generated-waste-not-elimination",
-                            "title": "Residuos no destinados a eliminación",
-                            "subtitle": "Consumo de energía dentro de la organización distinguiendo por renovable y no renovable.",
-                            "type": "line",
-                            "chartData": [
-                                {
-                                    "labels": [
-                                        "January",
-                                        "February",
-                                        "March",
-                                        "April",
-                                        "May",
-                                        "June",
-                                        "July"
-                                    ],
-                                    "datasets": [
-                                        {
-                                            "label": "Dataset 1",
-                                            "data": [
-                                                65,
-                                                59,
-                                                80,
-                                                81,
-                                                56,
-                                                55,
-                                                40
-                                            ],
-                                            "borderColor": "rgb(255, 99, 132)",
-                                            "backgroundColor": "rgba(255, 99, 132, 0.5)"
-                                        },
-                                        {
-                                            "label": "Dataset 2",
-                                            "data": [
-                                                1,
-                                                9,
-                                                20,
-                                                61,
-                                                16,
-                                                5,
-                                                12
-                                            ],
-                                            "borderColor": "rgb(53, 162, 235)",
-                                            "backgroundColor": "rgba(53, 162, 235, 0.5)"
-                                        }
-                                    ]
-                                }
-                            ]
+                            "label": "Actividades relacionadas con el combustible y la energía",
+                            "data": [
+                                10464669,
+                                9247680,
+                                12605341,
+                                11247289,
+                                0
+                            ],
+                            "backgroundColor": "#96D3DD",
+                            "yAxisID": "left-y-axis"
                         },
                         {
-                            "id": "generated-waste-elimination",
-                            "title": "Residuos destinados a eliminación",
-                            "subtitle": "Consumo de energía dentro de la organización distinguiendo por renovable y no renovable.",
-                            "type": "line",
-                            "chartData": [
-                                {
-                                    "labels": [
-                                        "January",
-                                        "February",
-                                        "March",
-                                        "April",
-                                        "May",
-                                        "June",
-                                        "July"
-                                    ],
-                                    "datasets": [
-                                        {
-                                            "label": "Dataset 1",
-                                            "data": [
-                                                65,
-                                                59,
-                                                80,
-                                                81,
-                                                56,
-                                                55,
-                                                40
-                                            ],
-                                            "borderColor": "rgb(255, 99, 132)",
-                                            "backgroundColor": "rgba(255, 99, 132, 0.5)"
-                                        },
-                                        {
-                                            "label": "Dataset 2",
-                                            "data": [
-                                                1,
-                                                9,
-                                                20,
-                                                61,
-                                                16,
-                                                5,
-                                                12
-                                            ],
-                                            "borderColor": "rgb(53, 162, 235)",
-                                            "backgroundColor": "rgba(53, 162, 235, 0.5)"
-                                        }
-                                    ]
-                                }
-                            ]
+                            "label": "Transporte y distribución corriente arriba",
+                            "data": [
+                                19631956,
+                                15512116,
+                                16170663,
+                                15728550,
+                                0
+                            ],
+                            "backgroundColor": "#3A727A",
+                            "yAxisID": "left-y-axis"
                         },
                         {
-                            "id": "significant-spills",
-                            "title": "Derrames significativos",
-                            "subtitle": "Consumo de energía dentro de la organización distinguiendo por renovable y no renovable.",
-                            "type": "line",
-                            "chartData": [
-                                {
-                                    "labels": [
-                                        "January",
-                                        "February",
-                                        "March",
-                                        "April",
-                                        "May",
-                                        "June",
-                                        "July"
-                                    ],
-                                    "datasets": [
-                                        {
-                                            "label": "Dataset 1",
-                                            "data": [
-                                                65,
-                                                59,
-                                                80,
-                                                81,
-                                                56,
-                                                55,
-                                                40
-                                            ],
-                                            "borderColor": "rgb(255, 99, 132)",
-                                            "backgroundColor": "rgba(255, 99, 132, 0.5)"
-                                        },
-                                        {
-                                            "label": "Dataset 2",
-                                            "data": [
-                                                1,
-                                                9,
-                                                20,
-                                                61,
-                                                16,
-                                                5,
-                                                12
-                                            ],
-                                            "borderColor": "rgb(53, 162, 235)",
-                                            "backgroundColor": "rgba(53, 162, 235, 0.5)"
-                                        }
-                                    ]
-                                }
-                            ]
+                            "label": "Transporte y distribución corriente abajo",
+                            "data": [
+                                6629947,
+                                5471002,
+                                5555217,
+                                5734657,
+                                0
+                            ],
+                            "backgroundColor": "#BEC3C8",
+                            "yAxisID": "left-y-axis"
                         },
                         {
-                            "id": "raw-materials-consumption",
-                            "title": "Consumo de materias primas",
-                            "subtitle": "Consumo de energía dentro de la organización distinguiendo por renovable y no renovable.",
-                            "type": "line",
-                            "chartData": [
-                                {
-                                    "labels": [
-                                        "January",
-                                        "February",
-                                        "March",
-                                        "April",
-                                        "May",
-                                        "June",
-                                        "July"
-                                    ],
-                                    "datasets": [
-                                        {
-                                            "label": "Dataset 1",
-                                            "data": [
-                                                65,
-                                                59,
-                                                80,
-                                                81,
-                                                56,
-                                                55,
-                                                40
-                                            ],
-                                            "borderColor": "rgb(255, 99, 132)",
-                                            "backgroundColor": "rgba(255, 99, 132, 0.5)"
-                                        },
-                                        {
-                                            "label": "Dataset 2",
-                                            "data": [
-                                                1,
-                                                9,
-                                                20,
-                                                61,
-                                                16,
-                                                5,
-                                                12
-                                            ],
-                                            "borderColor": "rgb(53, 162, 235)",
-                                            "backgroundColor": "rgba(53, 162, 235, 0.5)"
-                                        }
-                                    ]
-                                }
-                            ]
+                            "label": "Uso de los productos vendidos",
+                            "data": [
+                                786177937,
+                                652632957,
+                                658566498,
+                                711008867,
+                                0
+                            ],
+                            "backgroundColor": "#67737D",
+                            "yAxisID": "left-y-axis"
                         }
                     ]
                 }
-            ]
+            ],
+            "options": {
+                "barThickness": 18,
+                "scales": {
+                    "y": {
+                        "left": {
+                            "title": "Consumo energético (GJ)"
+                        }
+                    }
+                }
+            }
         }
     ]
 }

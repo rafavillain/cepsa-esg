@@ -14,9 +14,16 @@ const chartConfig = (chartOptions) => {
             }
         },
         scales: {
+            // x: {
+            //     display: chartOptions != undefined && chartOptions.scales.y.left ? true : false,
+            //   },
+            //   y: {
+            //     display: true,
+            //     type: 'logarithmic',
+            //   },
             'left-y-axis': {
                 display: chartOptions != undefined && chartOptions.scales.y.left ? true : false,
-                type: 'linear',
+                type: chartOptions != undefined && chartOptions.scales.y.type ? chartOptions.scales.y.type : 'linear',
                 position: 'left',
                 title: {
                     display: chartOptions != undefined ? true : false,
@@ -26,7 +33,7 @@ const chartConfig = (chartOptions) => {
             },
             'right-y-axis': {
                 display: chartOptions != undefined && chartOptions.scales.y.right ? true : false,
-                type: 'linear',
+                type: chartOptions != undefined && chartOptions.scales.y.type ? chartOptions.scales.y.type : 'linear',
                 position: 'right',
                 title: {
                     display: chartOptions != undefined ? true : false,

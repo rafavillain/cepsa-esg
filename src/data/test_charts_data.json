@@ -1,0 +1,797 @@
+[
+    {
+        "id": "id-2-2-4a",
+        "title": "Lorem ipsum",
+        "subtitle": "Número y volumen de derrames significativos por tipo de material derramado y superficie.",
+        "type": "scatter",
+        "chartData": [
+            {
+                "labels": [
+                    "2019",
+                    "2020",
+                    "2021",
+                    "2022",
+                    "2023"
+                ],
+                "datasets": [
+                    {
+                        "type": "line",
+                        "label": "Número derrames en suelo",
+                        "yAxisID": "left-y-axis",
+                        "data": [
+                            {
+                                "x": 1,
+                                "y": 1
+                            },
+                            {
+                                "x": 1,
+                                "y": 7
+                            }
+                        ],
+                        "borderColor": "black",
+                        "borderWidth": 1,
+                        "pointBackgroundColor": [
+                            "#000",
+                            "#00bcd6",
+                            "#d300d6"
+                        ],
+                        "pointBorderColor": [
+                            "#000",
+                            "#00bcd6",
+                            "#d300d6"
+                        ],
+                        "pointRadius": 5,
+                        "pointHoverRadius": 5,
+                        "fill": false,
+                        "tension": 0,
+                        "showLine": true
+                    },
+                    {
+                        "type": "line",
+                        "label": "Número derrames en agua",
+                        "yAxisID": "left-y-axis",
+                        "data": [
+                            {
+                                "x": 3,
+                                "y": 4
+                            },
+                            {
+                                "x": 3,
+                                "y": 6
+                            }
+                        ],
+                        "borderColor": "black",
+                        "borderWidth": 1,
+                        "pointBackgroundColor": [
+                            "#000",
+                            "#00bcd6",
+                            "#d300d6"
+                        ],
+                        "pointBorderColor": [
+                            "#000",
+                            "#00bcd6",
+                            "#d300d6"
+                        ],
+                        "pointRadius": 5,
+                        "pointHoverRadius": 5,
+                        "fill": false,
+                        "tension": 0,
+                        "showLine": true
+                    }
+                ]
+            }
+        ],
+        "options": {
+            "legend": false,
+            "tooltips": false,
+            "scales": {
+                "y": {
+                    "left": {
+                        "title": "Empleados (%)"
+                    }
+                },
+                "xAxes": [
+                    {
+                        "ticks": {
+                            "min": 0,
+                            "max": 10
+                        },
+                        "gridLines": {
+                            "drawOnChartArea": false
+                        }
+                    }
+                ],
+                "yAxes": [
+                    {
+                        "ticks": {
+                            "min": 0,
+                            "max": 8,
+                            "padding": 10
+                        },
+                        "gridLines": {
+                            "color": "#888",
+                            "drawOnChartArea": false
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    {
+        "id": "id-2-2-3b",
+        "title": "Residuos destinados a eliminación (2.2.3)",
+        "subtitle": "Residuos destinados a eliminación por tipo y operación de eliminación.",
+        "refs": [
+            {
+                "text": "[GRI 306-5/11.5.6]"
+            }
+        ],
+        "type": "bar",
+        "chartData": [
+            {
+                "labels": [
+                    "2023",
+                    "2022",
+                    "2021",
+                    "2020",
+                    "2019"
+                ],
+                "datasets": [
+                    {
+                        "yAxisID": "left-y-axis",
+                        "label": "Incineración (con recuperación energética)",
+                        "data": [
+                            "empty",
+                            "empty",
+                            "empty",
+                            0,
+                            0
+                        ]
+                    },
+                    {
+                        "yAxisID": "left-y-axis",
+                        "label": "Incineración (sin recuperación energética) ",
+                        "data": [
+                            "empty",
+                            52,
+                            1388,
+                            350,
+                            0
+                        ]
+                    },
+                    {
+                        "yAxisID": "left-y-axis",
+                        "label": "Traslado a un vertedero",
+                        "data": [
+                            "empty",
+                            13087,
+                            10480,
+                            15315,
+                            23640
+                        ]
+                    },
+                    {
+                        "yAxisID": "left-y-axis",
+                        "label": "Otras operaciones de eliminación",
+                        "data": [
+                            "empty",
+                            "empty",
+                            "empty",
+                            0,
+                            0
+                        ]
+                    }
+                ]
+            }
+        ],
+        "options": {
+            "scales": {
+                "y": {
+                    "left": {
+                        "title": "Residuos (toneladas)"
+                    }
+                }
+            }
+        }
+    },
+    {
+        "id": "organization-energy-consumption",
+        "title": "Consumo energético dentro de la organización 2",
+        "subtitle": "Consumo de energía dentro de la organización distinguiendo por renovable y no renovable.",
+        "refs": [
+            {
+                "text": "ref1"
+            },
+            {
+                "text": "ref2"
+            }
+        ],
+        "note": "Nota: Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus nostrum nihil, amet nam, nesciunt aliquam corporis recusandae fuga maxime eaque quisquam tenetur ullam, reiciendis ex libero. Harum tenetur tempora maxime.",
+        "type": "bar",
+        "chartData": [
+            {
+                "labels": [
+                    "2019",
+                    "2020",
+                    "2021",
+                    "2022",
+                    "2023"
+                ],
+                "datasets": [
+                    {
+                        "yAxisID": "left-y-axis",
+                        "label": "Electricidad renovable",
+                        "data": [
+                            1200377,
+                            "empty",
+                            1176026,
+                            4051166,
+                            4579718
+                        ],
+                        "backgroundColor": "rgb(38 55 70)",
+                        "stack": "combined",
+                        "borderColor": "transparent",
+                        "borderWidth": 2,
+                        "borderRadius": 4
+                    },
+                    {
+                        "yAxisID": "left-y-axis",
+                        "label": "Electricidad no renovable",
+                        "data": [
+                            5604581,
+                            "empty",
+                            5542132,
+                            1472328,
+                            1452931
+                        ],
+                        "backgroundColor": "rgb(150, 211, 221)",
+                        "stack": "combined",
+                        "borderColor": "transparent",
+                        "borderWidth": 2,
+                        "borderRadius": 4
+                    }
+                ]
+            }
+        ],
+        "options": {
+            "barThickness": 40,
+            "scales": {
+                "y": {
+                    "left": {
+                        "title": "test title left"
+                    }
+                }
+            }
+        }
+    },
+    {
+        "id": "id-3-1-1b",
+        "title": "Plantilla",
+        "subtitle": "Número de empleados por género, edad, país y clasificación profesional.",
+        "refs": [
+            {
+                "text": "[11/2018]"
+            }
+        ],
+        "type": "bar",
+        "chartData": [
+            {
+                "labels": [
+                    "Argelia",
+                    "Bélgica",
+                    "Brasil",
+                    "Canadá",
+                    "China",
+                    "Colombia",
+                    "Emiratos Árabes Unidos",
+                    "España",
+                    "Estados Unidos",
+                    "Italia",
+                    "Marruecos",
+                    "Malasia",
+                    "México",
+                    "Países Bajos",
+                    "Perú",
+                    "Portugal",
+                    "Reino Unido",
+                    "Singapur",
+                    "Tailandia"
+                ],
+                "datasets": [
+                    {
+                        "yAxisID": "left-y-axis",
+                        "label": "2022",
+                        "data": [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ]
+                    },
+                    {
+                        "yAxisID": "left-y-axis",
+                        "label": "2023",
+                        "data": [
+                            94,
+                            8,
+                            185,
+                            72,
+                            133,
+                            124,
+                            34,
+                            8983,
+                            0,
+                            7,
+                            1,
+                            1,
+                            12,
+                            5,
+                            29,
+                            607,
+                            9,
+                            7,
+                            0
+                        ]
+                    }
+                ]
+            }
+        ],
+        "options": {
+            "barThickness": 4,
+            "scales": {
+                "y": {
+                    "type": "logarithmic",
+                    "left": {
+                        "title": "Nº de empleados"
+                    }
+                }
+            }
+        }
+    },
+    {
+        "id": "id-3-4-1",
+        "title": "Convenios colectivos",
+        "subtitle": "Porcentaje de empleados cubiertos por convenios colectivos por país.",
+        "refs": [
+            {
+                "text": "[GRI 2-30]"
+            }
+        ],
+        "type": "bar",
+        "chartData": [
+            {
+                "labels": [
+                    "Argelia",
+                    "Canadá",
+                    "China",
+                    "Colombia",
+                    "Emiratos Árabes Unidos",
+                    "España",
+                    "Estados Unidos",
+                    "Italia",
+                    "Marruecos",
+                    "Malasia",
+                    "México",
+                    "Países Bajos",
+                    "Perú",
+                    "Portugal",
+                    "Reino Unido",
+                    "Singapur",
+                    "Tailandia"
+                ],
+                "datasets": [
+                    {
+                        "label": "2023",
+                        "data": [
+                            10,
+                            0,
+                            30,
+                            0,
+                            0,
+                            50,
+                            0,
+                            0,
+                            20,
+                            0,
+                            0,
+                            0,
+                            0,
+                            15,
+                            50,
+                            0,
+                            0
+                        ]
+                    },
+                    {
+                        "label": "2022",
+                        "data": [
+                            50,
+                            0,
+                            92,
+                            0,
+                            0,
+                            0,
+                            0,
+                            90,
+                            0,
+                            86,
+                            0,
+                            0,
+                            92,
+                            0,
+                            0,
+                            98,
+                            0,
+                            0,
+                            0,
+                            87
+                        ]
+                    }
+                ]
+            }
+        ],
+        "options": {
+            "barThickness": 5,
+            "scales": {
+                "y": {
+                    "left": {
+                        "title": "Empleados (%)"
+                    }
+                }
+            }
+        }
+    },
+    {
+        "id": "id-test-11231",
+        "title": "Plantilla 2",
+        "subtitle": "Número de empleados por género, edad, país y clasificación profesional.",
+        "refs": [
+            {
+                "text": "[11/2018]"
+            }
+        ],
+        "type": "doughnut",
+        "chartData": [
+            {
+                "labels": [
+                    "2023",
+                    "2022"
+                ],
+                "datasets": [
+                    {
+                        "label": "Mujer",
+                        "data": [
+                            3000,
+                            1000
+                        ]
+                    },
+                    {
+                        "label": "Hombre",
+                        "data": [
+                            5508,
+                            4453
+                        ]
+                    }
+                ]
+            }
+        ],
+        "options": {
+            "borderWidth": 5,
+            "scales": {
+                "y": {
+                    "left": {
+                        "title": "Emisiones (toneladas)"
+                    }
+                }
+            }
+        }
+    },
+    {
+        "id": "test-id-3",
+        "title": "Emisiones no GEI",
+        "refs": [
+            {
+                "text": "[GRI 305-7/11.3.2]"
+            }
+        ],
+        "type": "line",
+        "note": "Óxidos de nitrógeno (NOx), óxidos de azufre (SOx), Compuestos orgánicos volátiles (COV)",
+        "chartData": [
+            {
+                "labels": [
+                    "2023",
+                    "2022",
+                    "2021",
+                    "2020",
+                    "2019"
+                ],
+                "datasets": [
+                    {
+                        "yAxisID": "left-y-axis",
+                        "label": "NOx",
+                        "data": [
+                            0,
+                            8830,
+                            8268,
+                            9053,
+                            11643
+                        ]
+                    },
+                    {
+                        "yAxisID": "left-y-axis",
+                        "label": "SOx",
+                        "data": [
+                            0,
+                            5508,
+                            4453,
+                            4079,
+                            5101
+                        ]
+                    },
+                    {
+                        "yAxisID": "left-y-axis",
+                        "label": "COV",
+                        "data": [
+                            0,
+                            1133,
+                            1350,
+                            1794,
+                            2529
+                        ]
+                    },
+                    {
+                        "yAxisID": "left-y-axis",
+                        "label": "Partículas",
+                        "data": [
+                            0,
+                            537,
+                            490,
+                            438,
+                            642
+                        ]
+                    }
+                ]
+            }
+        ],
+        "options": {
+            "scales": {
+                "y": {
+                    "left": {
+                        "title": "Emisiones (toneladas)"
+                    }
+                }
+            }
+        }
+    },
+    {
+        "id": "test-id-2",
+        "title": "Residuos generados",
+        "subtitle": "Total residuos generados por tipo de residuo y tratamiento.",
+        "refs": [
+            {
+                "text": "[GRI 306-3/11.5.4]"
+            }
+        ],
+        "type": "bar",
+        "chartData": [
+            {
+                "labels": [
+                    "2019",
+                    "2020",
+                    "2021",
+                    "2022",
+                    "2023"
+                ],
+                "datasets": [
+                    {
+                        "yAxisID": "left-y-axis",
+                        "label": "Peligrosos destinados a la eliminación",
+                        "stack": "Stack 0",
+                        "data": [
+                            121,
+                            235,
+                            122,
+                            76,
+                            30
+                        ]
+                    },
+                    {
+                        "yAxisID": "left-y-axis",
+                        "label": "Peligrosos no destinados a la eliminación",
+                        "stack": "Stack 0",
+                        "data": [
+                            459,
+                            345,
+                            133,
+                            521,
+                            0
+                        ]
+                    },
+                    {
+                        "yAxisID": "left-y-axis",
+                        "label": "No peligrosos destinados a la eliminación",
+                        "stack": "Stack 1",
+                        "data": [
+                            236,
+                            153,
+                            104,
+                            130,
+                            0
+                        ]
+                    },
+                    {
+                        "yAxisID": "left-y-axis",
+                        "label": "No peligrosos no destinados a la eliminación",
+                        "stack": "Stack 1",
+                        "data": [
+                            153,
+                            512,
+                            0,
+                            212,
+                            123
+                        ]
+                    }
+                ]
+            }
+        ],
+        "options": {
+            "scales": {
+                "y": {
+                    "left": {
+                        "title": "Residuos (toneladas)"
+                    }
+                }
+            }
+        }
+    },
+    {
+        "id": "test-organization-energy-consumption",
+        "title": "Consumo energético dentro de la organización",
+        "subtitle": "Consumo de energía dentro de la organización distinguiendo por renovable y no renovable.",
+        "refs": [
+            {
+                "text": "[GRI 302-1/11.1.2]"
+            }
+        ],
+        "note": "El grupo de energía no renovable incluye: electricidad no renovable, gasóleo/diésel, fuel oleo, gas natural, gas residual, crudo, fuel gas y vapor.",
+        "type": "bar",
+        "chartData": [
+            {
+                "labels": [
+                    "2019",
+                    "2020",
+                    "2021",
+                    "2022",
+                    "2023"
+                ],
+                "datasets": [
+                    {
+                        "yAxisID": "left-y-axis",
+                        "label": "Electricidad renovable",
+                        "stack": "combined",
+                        "data": [
+                            1200377,
+                            1176026,
+                            4051166,
+                            4579718,
+                            0
+                        ]
+                    },
+                    {
+                        "yAxisID": "left-y-axis",
+                        "label": "Electricidad no renovable",
+                        "stack": "combined",
+                        "data": [
+                            5604581,
+                            5542132,
+                            1472328,
+                            1452931,
+                            0
+                        ]
+                    }
+                ]
+            }
+        ],
+        "options": {
+            "scales": {
+                "y": {
+                    "left": {
+                        "title": "Consumo energético (GJ)"
+                    }
+                }
+            }
+        }
+    },
+    {
+        "id": "id-2-2-4a",
+        "title": "Derrames significativos",
+        "subtitle": "Número y volumen de derrames significativos por tipo de material derramado y superficie.",
+        "type": "scatter",
+        "chartData": [
+            {
+                "labels": [
+                    "2019",
+                    "2020",
+                    "2021",
+                    "2022",
+                    "2023"
+                ],
+                "datasets": [
+                    {
+                        "type": "line",
+                        "label": "Número derrames en suelo",
+                        "data": [
+                            0,
+                            2,
+                            1,
+                            1,
+                            0
+                        ],
+                        "yAxisID": "left-y-axis"
+                    },
+                    {
+                        "type": "line",
+                        "label": "Número derrames en agua",
+                        "data": [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        "yAxisID": "left-y-axis"
+                    },
+                    {
+                        "type": "bar",
+                        "label": "Volumen de derrames en suelo",
+                        "data": [
+                            0,
+                            94,
+                            2,
+                            2,
+                            0
+                        ],
+                        "yAxisID": "right-y-axis"
+                    },
+                    {
+                        "type": "bar",
+                        "label": "Volumen de derrames en agua",
+                        "data": [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        "yAxisID": "right-y-axis"
+                    }
+                ]
+            }
+        ],
+        "options": {
+            "scales": {
+                "y": {
+                    "left": {
+                        "title": "Nº de derrames"
+                    },
+                    "right": {
+                        "title": "Volumen (Barriles)"
+                    }
+                }
+            }
+        }
+    }
+]
