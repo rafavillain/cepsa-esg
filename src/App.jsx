@@ -30,18 +30,18 @@ export default function App() {
     return (
         <div className="App">
 
-            {/* <ChartMainSelectors
+            <ChartMainSelectors
                 data={data}
                 setSelector3={setSelector}
             />
 
             <ChartEsg
                 chart={chart}
-            /> */}
-
-            <TestChartEsg
-                data={test_data}
             />
+
+            {/* <TestChartEsg
+                data={test_data}
+            /> */}
         </div>
     );
 }

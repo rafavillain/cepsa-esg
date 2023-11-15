@@ -1,5 +1,123 @@
 [
     {
+        "id": "id-2-2-4a",
+        "title": "Lorem ipsum",
+        "subtitle": "Número y volumen de derrames significativos por tipo de material derramado y superficie.",
+        "type": "scatter",
+        "chartData": [
+            {
+                "labels": [
+                    "2019",
+                    "2020",
+                    "2021",
+                    "2022",
+                    "2023"
+                ],
+                "datasets": [
+                    {
+                        "type": "line",
+                        "label": "Número derrames en suelo",
+                        "yAxisID": "left-y-axis",
+                        "data": [
+                            {
+                                "x": 1,
+                                "y": 1
+                            },
+                            {
+                                "x": 1,
+                                "y": 7
+                            }
+                        ],
+                        "borderColor": "black",
+                        "borderWidth": 1,
+                        "pointBackgroundColor": [
+                            "#000",
+                            "#00bcd6",
+                            "#d300d6"
+                        ],
+                        "pointBorderColor": [
+                            "#000",
+                            "#00bcd6",
+                            "#d300d6"
+                        ],
+                        "pointRadius": 5,
+                        "pointHoverRadius": 5,
+                        "fill": false,
+                        "tension": 0,
+                        "showLine": true
+                    },
+                    {
+                        "type": "line",
+                        "label": "Número derrames en agua",
+                        "yAxisID": "left-y-axis",
+                        "data": [
+                            {
+                                "x": 3,
+                                "y": 4
+                            },
+                            {
+                                "x": 3,
+                                "y": 6
+                            }
+                        ],
+                        "borderColor": "black",
+                        "borderWidth": 1,
+                        "pointBackgroundColor": [
+                            "#000",
+                            "#00bcd6",
+                            "#d300d6"
+                        ],
+                        "pointBorderColor": [
+                            "#000",
+                            "#00bcd6",
+                            "#d300d6"
+                        ],
+                        "pointRadius": 5,
+                        "pointHoverRadius": 5,
+                        "fill": false,
+                        "tension": 0,
+                        "showLine": true
+                    }
+                ]
+            }
+        ],
+        "options": {
+            "legend": false,
+            "tooltips": false,
+            "scales": {
+                "y": {
+                    "left": {
+                        "title": "Empleados (%)"
+                    }
+                },
+                "xAxes": [
+                    {
+                        "ticks": {
+                            "min": 0,
+                            "max": 10
+                        },
+                        "gridLines": {
+                            "drawOnChartArea": false
+                        }
+                    }
+                ],
+                "yAxes": [
+                    {
+                        "ticks": {
+                            "min": 0,
+                            "max": 8,
+                            "padding": 10
+                        },
+                        "gridLines": {
+                            "color": "#888",
+                            "drawOnChartArea": false
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    {
         "id": "id-2-2-3b",
         "title": "Residuos destinados a eliminación (2.2.3)",
         "subtitle": "Residuos destinados a eliminación por tipo y operación de eliminación.",
@@ -235,6 +353,7 @@
             "barThickness": 4,
             "scales": {
                 "y": {
+                    "type": "logarithmic",
                     "left": {
                         "title": "Nº de empleados"
                     }
